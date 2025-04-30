@@ -61,7 +61,7 @@ body.night-theme .navigation .navigation-item-active a{
 }
 
 body.night-theme .navigation {
-    background-image: url("./assets/nav_dark.png");
+    background-image: url("../assets/nav_dark.png");
 }
 
 body.night-theme .reservation_section {
