@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-lang="home_page_title">FoodZero</title>
+    
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/dark_themes/theme.css" />
+    <link rel="stylesheet" href="./css/preloader/preloader.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <script defer src="./js/night-theme.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="icon" type="image/png" href="../favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../favicons/favicon.svg" />
+    <link rel="shortcut icon" href="../favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="FoodZero" />
+    <link rel="manifest" href="../favicons/site.webmanifest" />
+  </head>
+  <body>
+    
+    <script>
+      const theme = localStorage.getItem("theme")
+      if(theme){
+        document.body.classList.add(theme)
+      }
+    </script>
+
+    <div class="mask">
+      <div class="loader"></div>
+    </div>
+    <div id="myNav" class="navigation">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="./assets/NaviClose.png" alt="NaviClose"></a>
+      <div class="navigation-content">
+          <ul class="navigation-ul">
+              <li class="navigation-item-active"><a href="./main.html" data-lang="nav_text1">Home</a></li>
+              <li class="navigation-item"><a href="./menu.html" data-lang="nav_text2">Menu</a></li>
+              <li class="navigation-item navigation-item-blogs"><a href="" data-lang="nav_text3">Blogs</a>
+                  <ul class="navigation-blogs">
+                      <li><a href="" data-lang="nav_text4">1 Column</a></li>
+                      <li><a href="" data-lang="nav_text5">2 Columns</a></li>
+                  </ul>
+              </li>
+              <li class="navigation-item"><a href="./about.html" data-lang="nav_text6">About</a></li>
+              <li class="navigation-item"><a href="./contact.html" data-lang="nav_text7">Contact</a></li>
+          </ul>
+      </div>
+      <div class="navigation-socials">
+          <div class="navigation-socials-text">
+              <h3 data-lang="nav_text8">Contact</h3>
+              <img src="./assets/LineNav.png" alt="LineNav">
+          </div>
+          <div class="navigation-socials-phone">
+              <p>+86 852 346 000</p>
+              <p>info@foodzero.com</p>
+          </div>
+          <div class="navigation-socials-address">
+              <p>1959 Sepulveda Blvd. </p>
+              <p>Culver City, CA, 90230</p>
+          </div>
+          <ul class="navigation-socials-list">
+              <li class="navigation-social-item"><a href="https://www.instagram.com/"><img src="./assets/Icon_instagram.svg" alt="Icon_instagram"></a></li>
+              <li class="navigation-social-item"><a href="https://x.com/"><img src="./assets/Icon_twitter.svg" alt="Icon_twitter"></a></li>
+              <li class="navigation-social-item"><a href="https://www.facebook.com/"><img src="./assets/Icon_facebook.svg" alt="Icon_facebook"></a></li>
+              <li class="navigation-social-item"><a href="https://www.youtube.com/"><img src="./assets/Icon_youtube.svg" alt="Icon_youtube"></a></li>
+          </ul>
+      </div>
+  </div>
+    <header>
+      <img src="./assets/Logo.png" alt="Logo" class="Logo" />
+      <img src="./assets/NaviOpen.svg" alt="NaviOpen" onclick="openNav()" class="nav-btn" />
+      <button class="night-theme-btn" id="night-theme-btn">
+        <img src="./assets/Moon.svg" alt="Moon" class="moon">
+        <img src="./assets/sun.png" alt="Sun" class="sun">
+      </button>
+      <button class="header-basket-btn">
+        <img src="./assets/white_basket.png" alt="basket">
+      </button>
+      <button class="poor-vision-version-btn">
+        <img src="./assets/Eye.png" alt="eye">
+      </button>
+      <button class="header_btn" data-btn="ru">Ru</button>
+      <button class="header_btn" data-btn="en">En</button>
+      <p>+86 852 346 000</p>
+      <button class="reservations_btn" data-lang="header_text">Reservation</button>
+    </header>
+    <main>
+      <section class="hero_section">
+        <article class="headline_hero">
+          <h1 data-lang="hero_section_h1">Healthy Eating is important part of lifestyle</h1>
+          <p data-lang="hero_section_text1">
+            Nutrient Choices: Fuel Your Life through
+            Healthy Eating
+          </p>
+        </article>
+        <article class="hero_img">
+          <img src="./assets/HeroImg.png" alt="HeroImg" class="HeroImg" />
+        </article>
+        <article class="hero_scroll_default">
+          <h2 data-lang="hero_section_text5">Scroll</h2>
+          <img src="./assets/ScrollLine.png" alt="ScrollLine" />
+        </article>
+        <article class="imageBoxes">
+          <article class="imageBox_first">
+            <img src="./assets/ImageBox1Picture.png" alt="ImageBox1Picture" />
+            <h2 data-lang="hero_section_text3">Start to plan your diet today</h2>
+            <p data-lang="hero_section_text4">
+              Embark on a Healthier Tomorrow: Start Your
+              Diet Journey
+            </p>
+          </article>
+          <article class="ImageBox_second">
+            <p data-lang="hero_section_text2">
+              Take control of your health: start 
+              planning your diet today
+            </p>
+            <img src="./assets/ImageBox2Picture.png" alt="ImageBox2Picture" />
+          </article>
+        </article>
+      </section>
+      <section class="menu_section">
+        <article class="menu_container">
+          <article class="menu_text">
+            <h3 data-lang="menu_text1">Our Menu</h3>
+            <p data-lang="menu_text2">
+              This is a section of our menu. Choose what suits you best
+            </p>
+          </article>
+          <article class="menu_section_menu">
+            <article class="priceList">
+              <img src="./assets/basket.png" alt="basket" class="product_basket">
+              <h4><span>$</span>20</h4>
+              <img src="./assets/MenuLine.png" alt="MenuLine" />
+              <h2 data-lang="menu_text3">Deep Sea Snow White Cod Fillet</h2>
+              <p data-lang="menu_text4">Treat yourself to a delicacy of Deep Sea  Snow White Cod Fillet</p>
+            </article>
+            <article class="priceList">
+              <img src="./assets/basket.png" alt="basket" class="product_basket">
+              <h4><span>$</span>22</h4>
+              <img src="./assets/MenuLine.png" alt="MenuLine" />
+              <h2 data-lang="menu_text5">Steak With Rosemary Butter</h2>
+              <p data-lang="menu_text6">Enjoy a Steak With Rosemary Butter</p>
+            </article>
+            <article class="priceList">
+              <img src="./assets/basket.png" alt="basket" class="product_basket">
+              <h4><span>$</span>18</h4>
+              <img src="./assets/MenuLine.png" alt="MenuLine" />
+              <h2 data-lang="menu_text7">Cucumber Salad</h2>
+              <p data-lang="menu_text8">Try this delicious Cucumber Salad</p>
+            </article>
+            <article class="priceList">
+              <img src="./assets/basket.png" alt="basket" class="product_basket">
+              <h4><span>$</span>90</h4>
+              <img src="./assets/MenuLine.png" alt="MenuLine" />
+              <h2 data-lang="menu_text9">Natural Wine Pairing</h2>
+              <p data-lang="menu_text10">The art of Natural Wine Pairings</p>
+            </article>
+          </article>
+        </article>
+      </section>
+      <section class="chef_section">
+        <article class="chef_section_container">
+          <img src="./assets/Chef.png" alt="Chef" />
+          <article class="chef_section_text">
+            <h3 data-lang="chef_text1">Excellent cook</h3>
+            <p data-lang="chef_text2">
+              Our cook is a culinary genius known for his 
+              innovative approach to traditional dishes. He
+              creates  meals that delight the senses. 
+            </p>
+          </article>
+        </article>
+      </section>
+      <section class="features_section">
+        <article class="features_content">
+          <article class="feature">
+            <img src="./assets/firstFeature.png" alt="firstFeature" />
+            <h4 data-lang="features_text1">Premium Quality</h4>
+            <p data-lang="features_text2">
+              Exemplary Taste: elevating culinary 
+              creations with Premium Quality
+            </p>
+          </article>
+          <article class="feature">
+            <img src="./assets/secondFeature.png" alt="secondFeature" />
+            <h4 data-lang="features_text3">Seasonal Vegetables</h4>
+            <p data-lang="features_text4">
+              Embracing Freshness: exploring the 
+              bounty of Seasonal Vegetables
+            </p>
+          </article>
+          <article class="feature">
+            <img src="./assets/thirdFeature.png" alt="thirdFeature" />
+            <h4 data-lang="features_text5">Fresh Fruit</h4>
+            <p data-lang="features_text6">
+              Nature's Sweetness: savoring the 
+              delights of Fresh Fruits
+            </p>
+          </article>
+        </article>
+      </section>
+      <section class="recent_post_section">
+        <article class="recent_post_container">
+          <article class="post_card_1">
+            <article class="imgPost">
+              <img src="./assets/Post_Image_1.png" alt="Post_Image_1" />
+              <button>Fashion</button>
+            </article>
+            <article class="post_card_text">
+              <ul class="post_card_user">
+                <li class="post_card_user_avatar">
+                  <img src="./assets/Avatar_Post1.png" alt="Avatar_Post1" />
+                  <p data-lang="post_text1">Julie Christie</p>
+                </li>
+                <article class="post_card_user_inf">
+                  <li data-lang="post_post1_text2">October 17,2021</li>
+                  <li>3:33 pm</li>
+                  <li data-lang="post_post1_text3">2 comments</li>
+                </article>
+              </ul>
+              <article class="post_card_comment">
+                <h4 data-lang="post_text4">Fruit and vegetables and protection against diseases</h4>
+                <img src="./assets/Line.png" alt="Line" />
+                <p data-lang="post_text5">How fruit and vegetables shield against diseases</p>
+              </article>
+              <article class="post_card_readMore">
+                <a href="" data-lang="post_post1_text6">Read More</a><img src="./assets/Icon_arrow-right.png" alt="Icon_arrow-right"/>
+              </article>
+            </article>
+          </article>
+          <article class="post_card_2">
+            <article class="imgPost">
+              <img src="./assets/Post_Image_2.png" alt="Post_Image_2" />
+              <button>Fashion</button>
+            </article>
+            <article class="post_card_text">
+              <ul class="post_card_user">
+                <li class="post_card_user_avatar">
+                  <img src="./assets/Avatar_Post2.png" alt="Avatar_Post2" />
+                  <p data-lang="post_text7">Dianne Russell</p>
+                </li>
+                <article class="post_card_user_inf">
+                  <li data-lang="post_post2_text2">October 17,2021</li>
+                  <li>3:33 pm</li>
+                  <li data-lang="post_post2_text3">2 comments</li>
+                </article>
+              </ul>
+              <article class="post_card_comment">
+                <h4 data-lang="post_text8">Asparagus Spring Salad with Rocket, Goat's Cheese</h4>
+                <img src="./assets/Line.png" alt="Line" />
+                <p data-lang="post_text9">Using Asparagus: Spring Salad with Rocket, Goat’s Cheese</p>
+              </article>
+              <article class="post_card_readMore">
+                <a href="" data-lang="post_post2_text6">Read More</a><img src="./assets/Icon_arrow-right.png" alt="Icon_arrow-right"/>
+              </article>
+            </article>
+          </article>
+        </article>
+      </section>
+      <section class="reservation_section">
+        <article class="reservation_container">
+          <article class="reservation_text">
+            <h3 data-lang="reservation_text1">Make a Reservation</h3>
+            <p data-lang="reservation_text2">Get in touch with restaurant</p>
+          </article>
+          <form class="reservation_form">
+            <article class="reservation_inf">
+              <input type="input" name="date" placeholder="16/22/2021" id="date" onfocus="(this.type='date')"/>
+              <select name="time_option" id="timeSelect" type="time">
+                <option value="1">6:00 pm</option>
+                <option value="2">7:00 pm</option>
+                <option value="3">8:00 pm</option>
+                <option value="4">9:00 pm</option>
+                <option value="5">10:00 pm</option>
+              </select>
+              <select name="person_option">
+                <option value="1" data-lang="reservation_text3">1 Person</option>
+                <option value="2" data-lang="reservation_text4">2 Person</option>
+                <option value="3" data-lang="reservation_text5">3 Person</option>
+                <option value="4" data-lang="reservation_text6">4 Person</option>
+              </select>
+            </article>
+            <button data-lang="reservation_text7">Book Now</button>
+          </form>
+        </article>
+      </section>
+      <section class="category_section">
+        <article class="category_section_container">
+          <article class="category_section_text">
+            <h2 data-lang="category_text1">Calories Energy Balance</h2>
+            <p data-lang="category_text2">Find Calorie Balance for Your Health</p>
+          </article>
+          <article class="category_section_blocks">
+            <article class="first_block">
+              <img src="./assets/starters.png" alt="starters" />
+              <article class="block_inf">
+                <a href="" data-lang="category_text3">Starters</a><img src="./assets/Icon_arrow-right-category.png" alt="Icon_arrow-right-category"/>
+              </article>
+            </article>
+            <article class="second_block">
+              <img src="./assets/mains.png" alt="mains" />
+              <article class="block_inf">
+                <a href="" data-lang="category_text4">Mains</a><img src="./assets/Icon_arrow-right-category.png" alt="Icon_arrow-right-category"/>
+              </article>
+            </article>
+            <article class="third_block">
+              <img src="./assets/soups.png" alt="soups" />
+              <article class="block_inf">
+                <a href="" data-lang="category_text5">Soups</a><img src="./assets/Icon_arrow-right-category.png" alt="Icon_arrow-right-category"/>
+              </article>
+            </article>
+          </article>
+        </article>
+      </section>
+      <section class="testimonials">
+          <article class="testimonials_swiper swiper">
+            <article class="testimonials_swiper_wrapper swiper-wrapper">
+              <article class="testimotional swiper-slide">
+                <p class="testimonial_text" data-lang="testimonial_text1">“ Absolutely loved my experience here! The dishes were bursting with flavor, and you can really tell that the chef puts a lot of thought into each recipe.</p>
+                <article class="testimonials_client">
+                  <img src="./assets/Client_avatar.png" alt="Client_avatar">
+                  <article class="testimonials_client_inf">
+                    <h4 data-lang="testimonial_name1">John Doe</h4>
+                    <p data-lang="testimonial_client1_profession1">Bloger</p>
+                  </article>
+                </article>
+              </article>
+              <article class="testimotional swiper-slide">
+                <p class="testimonial_text" data-lang="testimonial_text2">“ The ambiance was perfect for a romantic dinner. The food was exquisite, especially the steak with rosemary butter! Highly recommend this place.</p>
+                <article class="testimonials_client">
+                  <img src="./assets/Client_avatar2.png" alt="Client_avatar">
+                  <article class="testimonials_client_inf">
+                    <h4 data-lang="testimonial_name2">Lydia Bradley</h4>
+                    <p data-lang="testimonial_client1_profession2">Photographer</p>
+                  </article>
+                </article>
+              </article>
+              <article class="testimotional swiper-slide">
+                <p class="testimonial_text" data-lang="testimonial_text3">“ I’ve been here multiple times, and I want to say that it never disappoints! The starters menu is to die for. Make sure to try the basil pancakes!</p>
+                <article class="testimonials_client">
+                  <img src="./assets/Client_avatar3.png" alt="Client_avatar">
+                  <article class="testimonials_client_inf">
+                    <h4 data-lang="testimonial_name3">Greta Ray</h4>
+                    <p data-lang="testimonial_profession3">Designer</p>
+                  </article>
+                </article>
+              </article>
+              <article class="testimotional swiper-slide">
+                <p class="testimonial_text" data-lang="testimonial_text4">“ What a delightful surprise! The service was perfect, and the chef even came out to greet us. It’s clear they care about their customers.</p>
+                <article class="testimonials_client">
+                  <img src="./assets/Client_avatar4.png" alt="Client_avatar">
+                  <article class="testimonials_client_inf">
+                    <h4 data-lang="testimonial_name4">Maggie Clay</h4>
+                    <p data-lang="testimonial_client2_profession1">Bloger</p>
+                  </article>
+                </article>
+              </article>
+              <article class="testimotional swiper-slide">
+                <p class="testimonial_text" data-lang="testimonial_text5">“ I’m usually picky about where I eat, but this restaurant blew me away! The flavors were so well-balanced, and everything felt so fresh.</p>
+                <article class="testimonials_client">
+                  <img src="./assets/Client_avatar5.png" alt="Client_avatar">
+                  <article class="testimonials_client_inf">
+                    <h4 data-lang="testimonial_name5">Lena Stuart</h4>
+                    <p data-lang="testimonial_profession4">Producer</p>
+                  </article>
+                </article>
+              </article>
+              <article class="testimotional swiper-slide">
+                <p class="testimonial_text" data-lang="testimonial_text6">“ I can’t wait to come back! The menu was fantastic. I loved how creative the chef got with the dishes. This place is must-visit!</p>
+                <article class="testimonials_client">
+                  <img src="./assets/Client_avatar6.png" alt="Client_avatar">
+                  <article class="testimonials_client_inf">
+                    <h4 data-lang="testimonial_name6">Nancy Dunn</h4>
+                    <p data-lang="testimonial_client2_profession2">Photographer</p>
+                  </article>
+                </article>
+              </article>
+            </article>
+            <article class="testimonials_control">
+              <div class="swiper-pagination"></div>
+              <article class="swiper-button-prev">
+                <img src="./assets/Icon_arrow-left.png" alt="Icon_arrow-left">
+              </article>
+              <article class="swiper-button-next">
+                <img src="./assets/Icon_arrow-right.png" alt="Icon_arrow-right">
+              </article>
+            </article>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+        <article class="footer_container">
+          <article class="footer_logo">
+            <h2>Food
+              Zero.</h2>
+          </article>
+          <article class="footer_content">
+            <h5 data-lang="footer_text1">Contact</h5>
+            <p class="footer_content_phone">
+              +1+86 852 346 000
+              <br>
+              info@foodzero.com
+            </p>
+            <p class="footer_content_address">
+              1959 Sepulveda Blvd. 
+              <br>
+              Culver City, CA, 90230
+            </p>
+          </article>
+          <article class="footer_form">
+            <h5 data-lang="footer_text2">Never Miss a Recipe</h5>
+            <form action="#"  class="footer_form_box">
+              <input type="email" name="email" placeholder="Email Address">
+              <button data-lang="footer_text4">Subscribe</button>
+            </form>
+            <p data-lang="footer_text3">Join our subscribers and get best recipe delivered each week!</p>
+          </article>
+        </article>
+      <img src="./assets/Footer_line.png" alt="footer_line" class="footer_line_img">
+      <article class="footer_copyright">
+          <article class="footer_copyright_container">
+            <p data-lang="footer_text5">© 2020 Zero Inc. All rights Reserved</p>
+            <article class="footer_copyright_icons">
+              <img src="./assets/Icon_instagram.svg" alt="Icon_instagram">
+              <img src="./assets/Icon_twitter.svg" alt="Icon_twitter">
+              <img src="./assets/Icon_facebook.svg" alt="Icon_facebook">
+              <img src="./assets/Icon_youtube.svg" alt="Icon_youtube">
+            </article>
+          </article>
+      </article>
+    </footer>
+    <script src="./js/changeLanguage.js" type="module"></script>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/preloader.js"></script>
+  </body>
+</html>

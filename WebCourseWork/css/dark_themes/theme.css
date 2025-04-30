@@ -1,0 +1,149 @@
+body{
+    transition: background-color .4s, color .4s;
+}
+
+body.night-theme{
+    background: #191919;
+    color: var(--FFFFFF, #FFF);
+}
+
+header{
+    transition: background-color .4s, color .4s;
+}
+
+body.night-theme footer{
+    background-color: #000000;
+}
+
+footer{
+    transition: background-color .4s, color .4s;    
+}
+
+body.night-theme header{
+    background-color: #191919;
+
+}
+
+.hero_section{
+    transition: background-color .4s, color .4s;
+}
+
+body.night-theme .hero_section{
+    background: #191919;
+}
+
+body.night-theme h2{
+    color: white;
+}
+
+body.night-theme h1{
+    color: white;
+}
+
+body.night-theme h3{
+    color: white;
+}
+
+body.night-theme h4{
+    color: white;
+}
+
+body.night-theme p{
+    color: white;
+}
+
+body.night-theme a{
+    color: white;
+}
+
+body.night-theme .navigation .navigation-item-active a{
+    color: #9CAA00;
+}
+
+body.night-theme .navigation {
+    background-image: url("/assets/nav_dark.png");
+}
+
+
+body.night-theme li{
+    color: white;
+}
+
+body.night-theme .menu_section{
+    background-color: #000000;
+    transition: background-color .4s, color .4s;
+}
+
+body.night-theme .menu_section img{
+    filter: brightness(0) invert(1);
+}
+
+body.night-theme .testimonials_control{
+    color: white;
+}
+
+body.night-theme .chef_section{
+    background: #191919;
+    transition: background-color .4s, color .4s;
+    background-image: url("/assets/leaf_dark_theme.png");
+    background-position: 1.42rem 4.5rem;
+    background-repeat: no-repeat;
+    background-size: 95%;
+}
+
+body.night-theme .features_section{
+    background-color: #000000;
+    transition: background-color .4s, color .4s;
+}
+
+body.night-theme .reservation_section {
+    background-color: #000000;
+    transition: background-color .4s, color .4s;
+}
+
+body.night-theme .post_card_comment img{
+    filter: brightness(0) invert(1);
+}
+
+body.night-theme .post_card_readMore img{
+    filter: brightness(0) invert(1);
+}
+
+body.night-theme input{
+    border-color: white;
+    color: white;
+    color-scheme: dark;
+}
+
+body.night-theme input::placeholder{
+    color: white;
+}
+
+body.night-theme select{
+    border-color: white;
+    color: white;
+    background-color: transparent;
+    background-image: url('/assets/Icon_angle-down_white.png');
+    background-position: right 2.5rem center;
+    background-repeat: no-repeat;
+}
+
+body.night-theme option{
+    background-color: black;
+}
+
+body.night-theme .testimotional .testimonial_text {
+    color: white;
+}
+
+body.night-theme .testimonials_control img{
+    filter: brightness(0) invert(1);
+}
+
+body.night-theme .moon{
+    opacity: 0;
+}
+
+body.night-theme .sun{
+    opacity: 1;
+}

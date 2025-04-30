@@ -1,0 +1,696 @@
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rufina:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rufina:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rufina:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rufina:wght@400;700&display=swap');
+
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .header_and_heroSection{
+        width: 120rem;
+        margin: 0 auto;
+        height: 67.5rem;
+        background-image: url("../assets/menu_background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    /* Header */
+
+    header {
+        height: 13rem;
+        width: 120rem;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    header .Logo {
+        width: 19.188rem;
+        height: 7.188rem;
+        margin-left: 7.375rem;
+        margin-top: 2.875rem;
+    }
+
+    header .night-theme-btn {
+        border: none;
+        outline: none;
+        position: absolute;
+        background-color: transparent;
+        width: 3.75rem;
+        height: 3.75rem;
+        margin-left: 72.313rem;
+        margin-top: 4.938rem;
+    }
+
+    header .moon {
+        position: absolute;
+        right: 0.313rem;
+        bottom: 0.625rem;
+        width: 3.438rem;
+        height: 3.125rem;
+        flex-shrink: 0;
+    }
+
+    header .sun {
+        position: absolute;
+        right: 0.375rem;
+        bottom: 0.563rem;
+        width: 3.313rem;
+        height: 3.313rem;
+        flex-shrink: 0;
+        opacity: 0;
+    }
+
+    header .moon:hover {
+        filter: brightness(150%);
+        cursor: pointer;
+    }
+
+    header .sun:hover {
+        filter: brightness(150%);
+        cursor: pointer;
+    }
+
+    header .header_btn{
+        display: flex;
+        cursor:pointer;
+        width: 3.875rem;
+        height: 4rem;
+        color: white;
+        font-family: Rufina;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 4rem;
+        border: none;
+        margin-left: 1.75rem;
+        margin-top: 4.5rem;
+        background-color: transparent;
+    }
+
+    .header_btn_active,
+    .header_btn:hover{
+        text-shadow: 0 0 15px;
+    }
+
+    header .header-basket-btn{
+        width: 3.563rem;
+        height: 3.313rem;
+        background-color: transparent;
+        border: none;
+        margin-left: 20.313rem;
+        margin-top: 4.938rem;
+    }
+
+    header p {
+        width: 14.375rem;
+        height: 3.313rem;
+        color: var(--FFFFFF, #FFF);
+        font-feature-settings: 'liga' off, 'clig' off;
+        font-family: Inter;
+        font-size: 1.625rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 5.35rem;
+        letter-spacing: 0.03rem;
+        margin-left: 7.2rem;
+    }
+
+    header .reservations_btn {
+        width: 17.813rem;
+        height: 5.5rem;
+        font-family: Rufina;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3rem;
+        border: 2px solid var(--FFFFFF, #FFF);
+        background-color: transparent;
+        color: white;
+        margin-left: 1.47rem;
+        margin-top: 3.75rem;
+    }
+
+    /* HeroSection */
+
+    .hero_section{
+        width: 120rem;
+        margin: 0 auto;
+        height: 54.5rem;
+    }
+
+    .hero_container{
+        display: flex;
+        width: 48.688rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3.125rem;
+        padding-left: 8.625rem;
+        padding-top: 8.875rem;
+    }
+
+    .hero_container h1{
+        color: var(--FFFFFF, #FFF);
+        font-family: Rufina;
+        font-size: 9.25rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 9.5rem;
+    }
+
+    .hero_container p{
+        color: var(--FFFFFF, #FFF);
+        font-family: Rufina;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+    }
+
+    /* Menu */
+
+    .menu{
+        height: 371.125rem;
+    }
+
+    /* Menu Starters */
+    .starters_section{
+        width: 120rem;
+        height: 94rem;
+        background-image: url("../assets/Blueberry.png");
+        background-position: 98.7% 0%;
+        background-repeat: no-repeat;
+        background-size: 27%;
+        margin: 0 auto;
+    }
+
+    .starters_text{
+        display: flex;
+        width: 46.75rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.125rem;
+        margin-left: 36.625rem;
+        padding-top: 7.625rem;
+    }
+
+    .starters_text h2{
+        color: var(--000000, rgba(0, 0, 0, 0.95));
+        text-align: center;
+        font-family: Rufina;
+        font-size: 6.75rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 111.111%;
+    }
+
+    .starters_text p{
+        color: var(--4D4D4D, #000);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0.03rem;
+    }
+
+    .menu_content{
+        display: flex;
+        gap: 6.375rem;
+        margin-top: 5rem;
+        margin-left: 8.625rem;
+    }
+
+    .menu_content-body{
+        margin-top: 0.863rem;
+        display: grid;
+        width: 44.375rem;
+        grid-template-rows: 20.375rem 15.125rem 15.125rem;
+        row-gap: 3.625rem;
+    }
+
+    .menu_item .product_basket{
+        position: absolute;
+        width: 3.563rem;
+        height: 3.313rem;
+        margin-left: 32rem;
+        margin-top: 0.75rem;
+    }
+
+    .menu_item h4 {
+        text-align: end;
+        color: var(--000000, #000);
+        text-align: right;
+        font-family: Rufina;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 4rem;
+    }
+
+    .menu_item h2 {
+        color: var(--000000, #000);
+        font-family: Rufina;
+        font-size: 4.25rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 5.25rem;
+        margin-top: 1.35rem;
+
+    }
+
+    .menu_item p {
+        color: var(--4D4D4D, #4D4D4D);
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0.03rem;
+        margin-top: 1.5rem;
+    }
+
+    /* Menu mains */
+
+    .mains_section{
+        width: 120rem;
+        height: 100.438rem;
+        margin: 0 auto;
+    }
+
+    .mains_text{
+        display: flex;
+        width: 46.75rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.125rem;
+        margin-left: 36.625rem;
+        padding-top: 5.125rem;
+    }
+
+    .mains_text h2{
+        color: var(--000000, rgba(0, 0, 0, 0.95));
+        text-align: center;
+        font-family: Rufina;
+        font-size: 6.75rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 111.111%;
+    }
+
+    .mains_text p{
+        color: var(--4D4D4D, #000);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0.03rem;
+    }
+
+    .menu_content-inverted{
+        display: flex;
+        gap: 6.375rem;
+        margin-top: 8rem;
+        margin-left: 11.125rem;
+    }
+
+    .menu_content-body-inverted{
+        display: grid;
+        width: 44.375rem;
+        grid-template-rows: 20.375rem 20.375rem 20.375rem;
+        row-gap: 3.625rem;
+    }
+
+    .menu_content-img-inverted{
+        margin-top: 3.75rem;
+    }
+
+    /* Pastries Menu */
+
+    .pastries_and_drinks_section{
+        width: 120rem;
+        margin: 0 auto;
+        height: 107.125rem;
+        background-image: url("../assets/Avocado.png");
+        background-position: 54% 4.8%;
+        background-repeat: no-repeat;
+        background-size: 18.3%;
+    }
+
+    .pastries_text{
+        display: flex;
+        width: 57.625rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.125rem;
+        margin-left: 31.188rem;
+        padding-top: 11.688rem;
+    }
+
+    .pastries_text h2{
+        color: var(--000000, rgba(0, 0, 0, 0.95));
+        text-align: center;
+        font-family: Rufina;
+        font-size: 6.75rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 111.111%;
+        width: 66.75rem;
+    }
+
+    .pastries_text p{
+        color: var(--4D4D4D, #000);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0.03rem;
+    }
+
+    .menu_content-pastries{
+        display: flex;
+        gap: 6.375rem;
+        margin-top: 9.938rem;
+        margin-left: 8.625rem;
+    }
+
+    .menu_content-body-pastries{
+        margin-top: 1.4rem;
+        display: grid;
+        width: 44.375rem;
+        grid-template-rows: 15.125rem 15.125rem 15.125rem;
+        row-gap: 3.625rem;
+    }
+
+    /* Reservation */
+
+    .reservation_section {
+        display: flex;
+        width: 120rem;
+        margin: 0 auto;
+        height: 69.563rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 8.313rem;
+        background: var(--EBF0E4, #EBF0E4);
+    }
+
+    .reservation_container {
+        width: 103rem;
+        height: 39rem;
+        margin-top: 14.813rem;
+    }
+
+    .reservation_text {
+        width: 63rem;
+        height: 10.75rem;
+        margin-left: 20rem;
+    }
+
+    .reservation_text h3 {
+        color: var(--000000, #000);
+        font-feature-settings: 'liga' off, 'clig' off;
+        font-family: Rufina;
+        font-size: 6.75rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 7.5rem;
+    }
+
+    .reservation_text p {
+        color: var(--4D4D4D, #4D4D4D);
+        text-align: center;
+        font-feature-settings: 'liga' off, 'clig' off;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0.03rem;
+        margin-top: 1.125rem;
+    }
+
+    .reservation_form .reservation_inf {
+        display: grid;
+        grid-template-columns: 32.313rem 32.313rem 32.313rem;
+        column-gap: 3rem;
+        width: 102.75rem;
+        height: 6rem;
+        margin-top: 8.188rem;
+    }
+
+    .reservation_form input {
+        border: 0.125rem solid var(--000000, #000);
+        color: var(--000000, #000);
+        font-feature-settings: 'liga' off, 'clig' off;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0.03px;
+        display: flex;
+        padding: 1.875rem 2.6rem;
+        background: transparent;
+    }
+
+    .reservation_form input::placeholder {
+        color: var(--000000, #000);
+    }
+
+
+    .reservation_form select {
+        display: flex;
+        padding: 1.875rem 2.375rem;
+        align-self: stretch;
+        color: var(--000000, #000);
+        font-feature-settings: 'liga' off, 'clig' off;
+        appearance: none;
+        background-image: url("../assets/Icon_angle-down.png");
+        background-position: right 2.5rem center;
+        background-repeat: no-repeat;
+        background-color: #EBF0E4;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0.03rem;
+    }
+
+    .reservation_form select {
+        border: 0.125rem solid var(--000000, #000);
+    }
+
+    .reservation_container button {
+        display: flex;
+        width: 21.75rem;
+        height: 5.625rem;
+        justify-content: center;
+        align-items: center;
+        border: 0.125rem solid var(--000000, #000);
+        background: var(--233000, #233000);
+        color: var(--FFFFFF, #FFF);
+        font-feature-settings: 'liga' off, 'clig' off;
+        font-family: Rufina;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3rem;
+        margin-top: 8.313rem;
+        margin-left: 40.563rem;
+    }
+
+    /* Footer */
+
+    footer {
+        width: 120rem;
+        margin: 0 auto;
+        height: 41.938rem;
+        background: var(--233000, #233000);
+    }
+    
+    footer .footer_container {
+        height: 16.3rem;
+        display: flex;
+        padding-top: 7.2rem;
+        align-items: center;
+        width: 103rem;
+        margin-left: 8.7rem;
+    }
+    
+    .footer_logo h2 {
+        width: 11.75rem;
+        color: var(--FFFFFF, #FFF);
+        font-family: Rufina;
+        font-size: 4.25rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    
+    .footer_content {
+        margin-left: 14.85rem;
+    }
+    
+    .footer h5 {
+        margin-top: 0.2rem;
+        color: var(--FFFFFF, #FFF);
+        font-family: Rufina;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3rem;
+    }
+    
+    .footer_content_phone {
+        width: 14rem;
+        margin-top: 3.438rem;
+        color: var(--FFFFFF, #FFF);
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.563rem;
+        letter-spacing: 0.023rem;
+    }
+    
+    .footer_content_address {
+        width: 13.125rem;
+        margin-top: 1.75rem;
+        color: var(--FFFFFF, #FFF);
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.563rem;
+        letter-spacing: 0.023rem;
+    }
+    
+    .footer_form {
+        margin-left: 12.6rem;
+        display: grid;
+        grid-template-rows: 3.375rem 5.938rem 1.063rem;
+        row-gap: 2.188rem;
+    }
+    
+    .footer_form_box {
+        display: flex;
+        gap: 1.688rem;
+        height: 5.625rem;
+    }
+    
+    .footer_form p {
+        color: var(--FFFFFF, #FFF);
+        font-family: Montserrat;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.018rem;
+        width: 30rem;
+    }
+    
+    .footer_form_box input {
+        display: flex;
+        width: 32.5rem;
+        height: 5.75rem;
+        background-color: transparent;
+        border: 0.125rem solid var(--FFFFFF, #FFF);
+        color: var(--FFFFFF, #FFF);
+        font-family: Montserrat;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0.03rem;
+    }
+    
+    .footer_form_box input::placeholder {
+        color: var(--FFFFFF, #FFF);
+        font-family: Montserrat;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        height: 2.188rem;
+        padding-left: 2.4rem;
+        width: 25rem;
+        letter-spacing: 0.03rem;
+    }
+    
+    .footer_form_box input:focus{
+        color: var(--FFFFFF, #FFF);
+        font-family: Montserrat;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0.03rem;
+    }
+    
+    .footer_form_box button {
+        padding: 1.25rem 2.875rem;
+        margin-top: 0.1rem;
+        justify-content: center;
+        align-items: center;
+        color: var(--FFFFFF, #FFF);
+        background: var(--5E6600, #5E6600);
+        border: none;
+        font-family: Rufina;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3rem;
+    }
+    
+    .footer_line_img{
+        padding-top: 7.6rem;
+    }
+    
+    .footer_copyright{
+        width: 120rem;
+        margin-top: 3.5rem;
+    }
+    
+    .footer_copyright_container{
+        display: flex;
+        padding-left: 8.625rem;
+    
+    }
+    
+    .footer_copyright_container p{
+        color: var(--FFFFFF, #FFF);
+        font-family: Montserrat;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; 
+        letter-spacing: 0.03rem;
+    }
+    
+    .footer_copyright_icons{
+        display: flex;
+        margin-left: 61.563rem;
+        gap: 1.75rem;
+    }
+    
+    .footer_copyright_icons img{
+        width: 1.75rem;
+        height: 1.75rem;
+    }
