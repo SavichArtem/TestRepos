@@ -12,16 +12,16 @@ import { aboutPageText } from "./language_pages/languages_about-page.js";
 
 function checkPagePathName() {
     switch (currentPathName) {
-        case './main.html':
+        case '/main.html':
             currentText = homePageText;
             break;
-        case './menu.html':
+        case '/menu.html':
             currentText = menuPageText;
             break;
-        case './contact.html':
+        case '/contact.html':
             currentText = contactPageText;
             break;
-        case './about.html':
+        case '/about.html':
             currentText = aboutPageText;
             break;
         default:
