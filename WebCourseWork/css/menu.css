@@ -17,7 +17,7 @@
         width: 120rem;
         margin: 0 auto;
         height: 67.5rem;
-        background-image: url("../assets/menu_background.png");
+        background-image: url("assets/menu_background.png");
         background-size: cover;
         background-repeat: no-repeat;
     }
