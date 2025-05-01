@@ -12,16 +12,16 @@ import { aboutPageText } from "./language_pages/languages_about-page.js";
 
 function checkPagePathName() {
     switch (currentPathName) {
-        case './main.html':
+        case '/main.html':
             currentText = homePageText;
             break;
-        case './menu.html':
+        case '/menu.html':
             currentText = menuPageText;
             break;
-        case './contact.html':
+        case '/contact.html':
             currentText = contactPageText;
             break;
-        case './about.html':
+        case '/about.html':
             currentText = aboutPageText;
             break;
         default:
@@ -34,7 +34,7 @@ checkPagePathName();
 
 function changeLang() {
     for (const key in currentText) {
-        const elem = document.querySelector(`[data-lang=${key}]`);
+        const elem = document.querySelector(`[data-lang="${key}]"`);
         if (elem) {
             elem.textContent = currentText[key][currentLang];
         }
