@@ -34,7 +34,7 @@ checkPagePathName();
 
 function changeLang() {
     for (const key in currentText) {
-        const elem = document.querySelector(`[data-lang="${key}]"`);
+        const elem = document.querySelector(`[data-lang=${key}]`);
         if (elem) {
             elem.textContent = currentText[key][currentLang];
         }
