@@ -5,7 +5,7 @@ let currentLang = localStorage.getItem('language') || checkBrowserLang() || 'en'
 let currentText = {};
 
 import { homePageText } from "./language_pages/languages_main-page.js";
-import { menuPageText } from "./language_pages/languages_menu-page.js";
+import { menuPageText } from "../../language_pages/languages_menu-page.js";
 import { contactPageText } from "./language_pages/languages_contact-page.js";
 import { aboutPageText } from "./language_pages/languages_about-page.js";
 
