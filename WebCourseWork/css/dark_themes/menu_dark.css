@@ -25,16 +25,16 @@ footer{
 }
 
 body.night-theme .header_and_heroSection{
-    background-image: url("./assets/menu_background_dark.png"); 
+    background-image: url("../assets/menu_background_dark.png"); 
     transition: background-image .4s ease-in-out; 
 }
 
 body.night-theme .pastries_and_drinks_section{
-    background-image: url("./assets/Avocado_white.png");
+    background-image: url("../assets/Avocado_white.png");
 }
 
 body.night-theme .starters_section{
-    background-image: url("./assets/Blueberry_white.png");
+    background-image: url("../assets/Blueberry_white.png");
 }
 
 body.night-theme .product_basket{
