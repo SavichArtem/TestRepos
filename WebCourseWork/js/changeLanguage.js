@@ -24,9 +24,7 @@ function checkPagePathName() {
         case '/about.html':
             currentText = aboutPageText;
             break;
-        default:
-            currentText = homePageText;
-            break;
+
     }
 }
 
