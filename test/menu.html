@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="menu_page_title">Menu</title>
+
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/dark_themes/menu_dark.css" />
+    <link rel="stylesheet" href="./css/preloader/preloader.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <script defer src="./js/night-theme.js"></script>
+
+    <link rel="icon" type="image/png" href="./favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicons/favicon.svg" />
+    <link rel="shortcut icon" href="./favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="FoodZero" />
+    <link rel="manifest" href="./favicons/site.webmanifest" />
+</head>
+<body>
+    <script>
+        const theme = localStorage.getItem("theme")
+        if(theme){
+          document.body.classList.add(theme)
+        }
+      </script>
+
+    <div class="mask">
+        <div class="loader"></div>
+    </div>
+
+    <div id="myNav" class="navigation">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="./assets/NaviClose.png" alt="NaviClose"></a>
+        <div class="navigation-content">
+            <ul class="navigation-ul">
+                <li class="navigation-item"><a href="./main.html" data-lang="nav_text1">Home</a></li>
+                <li class="navigation-item-active"><a href="./menu.html" data-lang="nav_text2">Menu</a></li>
+                <li class="navigation-item navigation-item-blogs"><a href="" data-lang="nav_text3">Blogs</a>
+                    <ul class="navigation-blogs">
+                        <li><a href="" data-lang="nav_text4">1 Column</a></li>
+                        <li><a href="./two_column_blogs.html" data-lang="nav_text5">2 Columns</a></li>
+                    </ul>
+                </li>
+                <li class="navigation-item"><a href="./about.html" data-lang="nav_text6">About</a></li>
+                <li class="navigation-item"><a href="./contact.html" data-lang="nav_text7">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navigation-socials">
+            <div class="navigation-socials-text">
+                <h3 data-lang="nav_text8">Contact</h3>
+                <img src="./assets/LineNav.png" alt="LineNav">
+            </div>
+            <div class="navigation-socials-phone">
+                <p>+86 852 346 000</p>
+                <p>info@foodzero.com</p>
+            </div>
+            <div class="navigation-socials-address">
+                <p>1959 Sepulveda Blvd. </p>
+                <p>Culver City, CA, 90230</p>
+            </div>
+            <ul class="navigation-socials-list">
+                <li class="navigation-social-item"><a href="https://www.instagram.com/"><img src="./assets/Icon_instagram.svg" alt="Icon_instagram"></a></li>
+                <li class="navigation-social-item"><a href="https://x.com/"><img src="./assets/Icon_twitter.svg" alt="Icon_twitter"></a></li>
+                <li class="navigation-social-item"><a href="https://www.facebook.com/"><img src="./assets/Icon_facebook.svg" alt="Icon_facebook"></a></li>
+                <li class="navigation-social-item"><a href="https://www.youtube.com/"><img src="./assets/Icon_youtube.svg" alt="Icon_youtube"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_and_heroSection">
+        <header>
+            <img src="./assets/Logo.png" alt="Logo" class="Logo" />
+            <img src="./assets/NaviOpen.svg" alt="NaviOpen" onclick="openNav()" class="nav-btn" />
+            <button class="night-theme-btn" id="night-theme-btn">
+              <img src="./assets/Moon.svg" alt="Moon" class="moon">
+              <img src="./assets/sun.png" alt="Sun" class="sun">
+            </button>
+            <button class="header-basket-btn">
+              <img src="./assets/white_basket.png" alt="basket">
+            </button>
+            <button class="header_btn" data-btn="ru">Ru</button>
+            <button class="header_btn" data-btn="en">En</button>
+            <p>+86 852 346 000</p>
+            <button class="reservations_btn" data-lang="header_text">Reservation</button>
+          </header>
+          <section class="hero_section">
+            <div class="hero_container">
+                <h1 data-lang="hero_text1">View Our New Menu</h1>
+                <p data-lang="hero_text2">The freshest ingredients for you every day</p>
+            </div>
+          </section>
+    </div>
+    <main class="menu">
+        <section class="filters_section">
+            <div class="filters_container">
+                <div class="search_filter">
+                    <input type="text" id="searchInput" placeholder="Search..." data-lang="search_placeholder">
+                    <button id="searchButton" data-lang="search_button">Search</button>
+                </div>
+                
+                <div class="sort_filter">
+                    <select id="sortSelect">
+                        <option value="" data-lang="sort_default">Default sorting</option>
+                        <option value="price_asc" data-lang="sort_price_asc">Price (Low to High)</option>
+                        <option value="price_desc" data-lang="sort_price_desc">Price (High to Low)</option>
+                        <option value="name_asc" data-lang="sort_name_asc">Name (A-Z)</option>
+                        <option value="name_desc" data-lang="sort_name_desc">Name (Z-A)</option>
+                    </select>
+                </div>
+                
+                <div class="category_filter">
+                    <div class="category_buttons">
+                        <button class="category_btn active" data-category="all" data-lang="category_all">All</button>
+                        <button class="category_btn" data-category="starters" data-lang="category_starters">Starters</button>
+                        <button class="category_btn" data-category="mains" data-lang="category_mains">Mains</button>
+                        <button class="category_btn" data-category="pastries" data-lang="category_pastries">Pastries & Drinks</button>
+                    </div>
+                </div>
+                
+                <div class="advanced_filters">
+                    <div class="price_range">
+                        <h3 data-lang="price_range">Price Range</h3>
+                        <div class="range_inputs">
+                            <input type="number" id="minPrice" placeholder="Min" data-lang="min_price">
+                            <span>-</span>
+                            <input type="number" id="maxPrice" placeholder="Max" data-lang="max_price">
+                            <button id="applyPriceRange" data-lang="apply_button">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="noResultsMessage" class="no_results" style="display: none;" data-lang="no_results">
+                No products found matching your criteria.
+            </div>
+        </section>
+        <section class="starters_section">
+            <div class="starters_text">
+                <h2 data-lang="starters_text1">Starters</h2>
+                <p data-lang="starters_text2">This is a section of our menu. Choose what suits you best</p>
+            </div>
+            <div class="menu_content">
+                <div class="menu_content-img">
+                    <img src="./assets/starters_image_menu.png" alt="starters_image_menu">
+                </div>
+                <div class="menu_content-body">
+                    <div class="menu_item">
+                        <img src="./assets/basket.png" alt="basket" class="product_basket">
+                        <h4><span>$</span>20</h4>
+                        <img src="./assets/MenuPage_line.png" alt="MenuLine" class="menu_line"/>
+                        <h2 data-lang="starters_text3">Grilled Okra and Tomatoes</h2>
+                        <p data-lang="starters_text4">Grilled Okra and Tomatoes Delight</p> 
+                    </div>
+                    <div class="menu_item">
+                        <img src="./assets/basket.png" alt="basket" class="product_basket">
+                        <h4><span>$</span>18</h4>
+                        <img src="./assets/MenuPage_line.png" alt="MenuLine" class="menu_line"/>
+                        <h2 data-lang="starters_text5">Cucumber Salad</h2>
+                        <p data-lang="starters_text6">Try this delicious Cucumber Salad</p> 
+                    </div>
+                    <div class="menu_item">
+                        <img src="./assets/basket.png" alt="basket" class="product_basket">
+                        <h4><span>$</span>12</h4>
+                        <img src="./assets/MenuPage_line.png" alt="MenuLine" class="menu_line"/>
+                        <h2 data-lang="starters_text7">Basil Pancakes</h2>
+                        <p data-lang="starters_text8">Basil Pancakes - a delicious breakfast</p> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mains_section">
+            <div class="mains_text">
+                <h2 data-lang="mains_text1">Mains</h2>
+                <p data-lang="mains_text2">This is a section of our menu. Choose what suits you best</p>
+            </div>
+            <div class="menu_content-inverted">
+                <div class="menu_content-body-inverted">
+                    <div class="menu_item">
+                        <img src="./assets/basket.png" alt="basket" class="product_basket">
+                        <h4><span>$</span>20</h4>
+                        <img src="./assets/MenuPage_line.png" alt="MenuLine" class="menu_line"/>
+                        <h2 data-lang="mains_text3">Deep Sea Snow White Cod Fillet</h2>
+                        <p data-lang="mains_text4">Delicious Deep Sea Snow White Cod Fillet</p> 
+                    </div>
+                    <div class="menu_item">
+                        <img src="./assets/basket.png" alt="basket" class="product_basket">
+                        <h4><span>$</span>22</h4>
+                        <img src="./assets/MenuPage_line.png" alt="MenuLine" class="menu_line"/>
+                        <h2 data-lang="mains_text5">Steak With Rosemary Butter</h2>
+                        <p data-lang="mains_text6">Enjoy a Steak With Rosemary Butter</p> 
+                    </div>
+                    <div class="menu_item">
+                        <img src="./assets/basket.png" alt="basket" class="product_basket">
+                        <h4><span>$</span>20</h4>
+                        <img src="./assets/MenuPage_line.png" alt="MenuLine" class="menu_line"/>
+                        <h2 data-lang="mains_text7">Steaks with Grilled Kimchi</h2>
+                        <p data-lang="mains_text8">Delicious Steaks with Grilled Kimchi</p> 
+                    </div>
+                </div>
+                <div class="menu_content-img-inverted">
+                    <img src="./assets/mains_image_menu.png" alt="mains_image_menu">
+                </div>
+            </div>
+        </section>
+        <section class="pastries_and_drinks_section">
+            <div class="pastries_text">
+                <h2 data-lang="pastries_text1">Pastries & Drinks</h2>
+                <p data-lang="pastries_text2">This is a section of our menu. Choose what suits you best</p>
+            </div>
+            <div class="menu_content-pastries">
+                <div class="menu_content-img">
+                    <img src="./assets/pastries_image_menu.png" alt="pastries_image_menu">
+                </div>
+                <div class="menu_content-body-pastries">
+                    <div class="menu_item">
+                        <img src="./assets/basket.png" alt="basket" class="product_basket">
+                        <h4><span>$</span>158</h4>
+                        <img src="./assets/MenuPage_line.png" alt="MenuLine" class="menu_line"/>
+                        <h2 data-lang="pastries_text3">Wine Pairing</h2>
+                        <p data-lang="pastries_text4">Try our delicious Wine Pairing</p> 
+                    </div>
+                    <div class="menu_item">
+                        <img src="./assets/basket.png" alt="basket" class="product_basket">
+                        <h4><span>$</span>168</h4>
+                        <img src="./assets/MenuPage_line.png" alt="MenuLine" class="menu_line"/>
+                        <h2 data-lang="pastries_text5">Natural Wine Pairing</h2>
+                        <p data-lang="pastries_text6">The art of Natural Wine Pairings</p> 
+                    </div>
+                    <div class="menu_item">
+                        <img src="./assets/basket.png" alt="basket" class="product_basket">
+                        <h4><span>$</span>90</h4>
+                        <img src="./assets/MenuPage_line.png" alt="MenuLine" class="menu_line"/>
+                        <h2 data-lang="pastries_text7">Whisky Flyer</h2>
+                        <p data-lang="pastries_text8">Enjoy a Whisky Flyer</p> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reservation_section">
+            <article class="reservation_container">
+              <article class="reservation_text">
+                <h3 data-lang="reservation_text1">Make a Reservation</h3>
+                <p data-lang="reservation_text2">Get in touch with restaurant</p>
+              </article>
+              <form class="reservation_form">
+                <article class="reservation_inf">
+                  <input type="input" name="date" placeholder="16/22/2021" id="date" onfocus="(this.type='date')"/>
+                  <select name="time_option" id="timeSelect" type="time">
+                    <option value="1">6:00 pm</option>
+                    <option value="2">7:00 pm</option>
+                    <option value="3">8:00 pm</option>
+                    <option value="4">9:00 pm</option>
+                    <option value="5">10:00 pm</option>
+                  </select>
+                  <select name="person_option">
+                    <option value="1" data-lang="reservation_text3">1 Person</option>
+                    <option value="2" data-lang="reservation_text4">2 Person</option>
+                    <option value="3" data-lang="reservation_text5">3 Person</option>
+                    <option value="4" data-lang="reservation_text6">4 Person</option>
+                  </select>
+                </article>
+                <button data-lang="reservation_text7">Book Now</button>
+              </form>
+            </article>
+        </section>
+    </main>
+    <footer class="footer">
+        <article class="footer_container">
+          <article class="footer_logo">
+            <h2>Food
+              Zero.</h2>
+          </article>
+          <article class="footer_content">
+            <h5 data-lang="footer_text1">Contact</h5>
+            <p class="footer_content_phone">
+              +1+86 852 346 000
+              <br>
+              info@foodzero.com
+            </p>
+            <p class="footer_content_address">
+              1959 Sepulveda Blvd. 
+              <br>
+              Culver City, CA, 90230
+            </p>
+          </article>
+          <article class="footer_form">
+            <h5 data-lang="footer_text2">Never Miss a Recipe</h5>
+            <form action="#"  class="footer_form_box">
+              <input type="email" name="email" placeholder="Email Address">
+              <button data-lang="footer_text4">Subscribe</button>
+            </form>
+            <p data-lang="footer_text3">Join our subscribers and get best recipe delivered each week!</p>
+          </article>
+        </article>
+      <img src="./assets/Footer_line.png" alt="footer_line" class="footer_line_img">
+      <article class="footer_copyright">
+          <article class="footer_copyright_container">
+            <p data-lang="footer_text5">© 2020 Zero Inc. All rights Reserved</p>
+            <article class="footer_copyright_icons">
+              <img src="./assets/Icon_instagram.svg" alt="Icon_instagram">
+              <img src="./assets/Icon_twitter.svg" alt="Icon_twitter">
+              <img src="./assets/Icon_facebook.svg" alt="Icon_facebook">
+              <img src="./assets/Icon_youtube.svg" alt="Icon_youtube">
+            </article>
+          </article>
+      </article>
+    </footer>
+    <script src="./js/changeLanguage.js" type="module"></script>
+    <script src="./js/preloader.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/navigation.js"></script>
+</body>
+</html>
