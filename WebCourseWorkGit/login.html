@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-lang="login_title">Login</title>
+  <link rel="stylesheet" href="./css/login.css">
+  <link rel="stylesheet" href="./css/dark_themes/login_dark.css">
+  <link rel="stylesheet" href="./css/cart.css">
+  <link rel="stylesheet" href="./css/dark_themes/cart_dark.css">
+  <link rel="stylesheet" href="./css/preloader/preloader.css">
+  <link rel="stylesheet" href="./css/navigation.css">
+  <script defer src="./js/night-theme.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <link rel="icon" type="image/png" href="./favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./favicons/favicon.svg" />
+  <link rel="shortcut icon" href="./favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="FoodZero" />
+  <link rel="manifest" href="./favicons/site.webmanifest" />
+
+</head>
+
+<body>
+  <script>
+    const theme = localStorage.getItem("theme")
+    if (theme) {
+      document.body.classList.add(theme)
+    }
+  </script>
+
+  <div class="mask">
+    <div class="loader"></div>
+  </div>
+  <div id="myNav" class="navigation">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="./assets/NaviClose.png"
+        alt="NaviClose"></a>
+    <div class="navigation-content">
+      <ul class="navigation-ul">
+        <li class="navigation-item"><a href="./main.html" data-lang="nav_text1">Home</a></li>
+        <li class="navigation-item"><a href="./menu.html" data-lang="nav_text2">Menu</a></li>
+        <li class="navigation-item navigation-item-blogs"><a href="./blogs.html" data-lang="nav_text3">Blogs</a></li>
+        <li class="navigation-item"><a href="./about.html" data-lang="nav_text6">About</a></li>
+        <li class="navigation-item"><a href="./contact.html" data-lang="nav_text7">Contact</a></li>
+      </ul>
+    </div>
+    <div class="navigation-socials">
+      <div class="navigation-socials-text">
+        <h3 data-lang="nav_text8">Contact</h3>
+        <img src="./assets/LineNav.png" alt="LineNav">
+      </div>
+      <div class="navigation-socials-phone">
+        <p>+86 852 346 000</p>
+        <p>info@foodzero.com</p>
+      </div>
+      <div class="navigation-socials-address">
+        <p>1959 Sepulveda Blvd. </p>
+        <p>Culver City, CA, 90230</p>
+      </div>
+      <ul class="navigation-socials-list">
+        <li class="navigation-social-item"><a href="https://www.instagram.com/"><img src="./assets/Icon_instagram.svg"
+              alt="Icon_instagram"></a></li>
+        <li class="navigation-social-item"><a href="https://x.com/"><img src="./assets/Icon_twitter.svg"
+              alt="Icon_twitter"></a></li>
+        <li class="navigation-social-item"><a href="https://www.facebook.com/"><img src="./assets/Icon_facebook.svg"
+              alt="Icon_facebook"></a></li>
+        <li class="navigation-social-item"><a href="https://www.youtube.com/"><img src="./assets/Icon_youtube.svg"
+              alt="Icon_youtube"></a></li>
+      </ul>
+    </div>
+  </div>
+  <header>
+    <img src="./assets/Logo.png" alt="Logo" class="Logo" />
+    <img src="./assets/NaviOpen.svg" alt="NaviOpen" onclick="openNav()" class="nav-btn" />
+    <button class="night-theme-btn" id="night-theme-btn">
+      <img src="./assets/Moon.svg" alt="Moon" class="moon">
+      <img src="./assets/sun.png" alt="Sun" class="sun">
+    </button>
+    <button class="header-basket-btn">
+      <img src="./assets/white_basket.png" alt="basket">
+    </button>
+    <button class="header_btn" data-btn="ru">Ru</button>
+    <button class="header_btn" data-btn="en">En</button>
+    <p>+86 852 346 000</p>
+    <div id="authControls">
+      <button class="reservations_btn" id="reservationBtn" data-lang="header_text">Reservation</button>
+    </div>
+  </header>
+  <div class="login-container">
+    <h1 data-lang="login_text1">Login</h1>
+    <form id="loginForm" novalidate>
+      <div class="form-group">
+        <label for="loginEmail" data-lang="login_text2">Email</label>
+        <input type="email" id="loginEmail" required>
+        <div id="loginEmailError" class="error-message"></div>
+      </div>
+      <div class="form-group">
+        <label for="loginPassword" data-lang="login_text3">Password</label>
+        <input type="password" id="loginPassword" required>
+        <div id="loginPasswordError" class="error-message"></div>
+      </div>
+      <button type="submit" data-lang="login_text4">Login</button>
+      <p class="login-text">
+        <span data-lang="login_text5">Don't have an account?</span>
+        <a href="registration.html" data-lang="login_text6">Register</a>
+      </p>
+      <div id="loginGeneralError" class="error-message" style="text-align: center; margin-top: 1rem;"></div>
+    </form>
+  </div>
+  <footer class="footer">
+    <article class="footer_container">
+      <article class="footer_logo">
+        <h2>Food
+          Zero.</h2>
+      </article>
+      <article class="footer_content">
+        <h5 data-lang="footer_text1">Contact</h5>
+        <p class="footer_content_phone">
+          +1+86 852 346 000
+          <br>
+          info@foodzero.com
+        </p>
+        <p class="footer_content_address">
+          1959 Sepulveda Blvd.
+          <br>
+          Culver City, CA, 90230
+        </p>
+      </article>
+      <article class="footer_form">
+        <h5 data-lang="footer_text2">Never Miss a Recipe</h5>
+        <form action="#" class="footer_form_box">
+          <input type="email" name="email" placeholder="Email Address">
+          <button data-lang="footer_text4">Subscribe</button>
+        </form>
+        <p data-lang="footer_text3">Join our subscribers and get best recipe delivered each week!</p>
+      </article>
+    </article>
+    <img src="./assets/Footer_line.png" alt="footer_line" class="footer_line_img">
+    <article class="footer_copyright">
+      <article class="footer_copyright_container">
+        <p data-lang="footer_text5">© 2020 Zero Inc. All rights Reserved</p>
+        <article class="footer_copyright_icons">
+          <img src="./assets/Icon_instagram.svg" alt="Icon_instagram">
+          <img src="./assets/Icon_twitter.svg" alt="Icon_twitter">
+          <img src="./assets/Icon_facebook.svg" alt="Icon_facebook">
+          <img src="./assets/Icon_youtube.svg" alt="Icon_youtube">
+        </article>
+      </article>
+    </article>
+  </footer>
+    <script src="./js/changeLanguage.js" type="module"></script>
+    <script src="./js/authentication/authGuard.js"></script>
+    <script src="./js/authentication/validation.js" type="module"></script>
+    <script src="./js/authentication/auth.js" type="module"></script>
+    <script src="./js/cart/cart.js" type="module"></script>
+    <script src="./js/cart/cart-modal.js" type="module"></script>
+    <script src="./js/cart/init-cart.js" type="module"></script>
+    <script src="./js/authentication/formSubmit.js" type="module"></script>
+    <script src="./js/preloader.js"></script>
+    <script src="./js/navigation.js"></script>
+</body>
+
+</html>

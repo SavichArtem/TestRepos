@@ -1,0 +1,4 @@
+body.night-theme .modal-content{
+    background: #191919;
+    color: var(--FFFFFF, #FFF);
+}

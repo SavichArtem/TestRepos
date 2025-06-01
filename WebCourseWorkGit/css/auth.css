@@ -1,0 +1,258 @@
+.login-container {
+    max-width: 25rem;
+    margin: 3.125rem auto;
+    padding: 1.25rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group h3 {
+    display: block;
+    font-family: Rufina;
+    font-style: normal;
+    font-weight: 300;
+    margin-bottom: 0.625rem;
+}
+
+.form-group input {
+    width: 95%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+}
+
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    padding-top: 4.5rem;
+    padding-left: 1.75rem;
+}
+
+.user-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.313rem;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 1.5% auto;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    width: 80%;
+    max-width: 31.25rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+#profileModal .closeBtn {
+    color: #aaa;
+    float: right;
+    font-size: 1.75rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#profileModal .closeBtn:hover {
+    color: black;
+}
+
+/* Модальное окно профиля */
+#profileModal .modal-content {
+    max-width: 31.25rem;
+}
+
+#profileModal h2 {
+    text-align: center;
+    font-family: Rufina;
+}
+
+#profileModal .form-group {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+#profileModal .error-message {
+    color: #f44336;
+    font-size: 0.75rem;
+    margin-top: 0.313rem;
+    min-height: 1.125rem;
+}
+
+/* Уведомления */
+.notification {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    padding: 0.938rem 1.25rem;
+    border-radius: 0.25rem;
+    color: white;
+    z-index: 1000;
+    animation: slide-in 0.5s;
+}
+
+.notification.success {
+    background-color: #4CAF50;
+}
+
+.notification.error {
+    background-color: #f44336;
+}
+
+.notification.fade-out {
+    animation: fade-out 0.5s;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+/* Стили для формы профиля */
+#profileModal .form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+    gap: 0.625rem;
+}
+
+#profileModal .btn-save {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.625rem 1.25rem;
+    font-family: Rufina;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    flex-grow: 1;
+    transition: background-color 0.3s;
+}
+
+#profileModal .btn-save:hover {
+    background-color: #45a049;
+}
+
+#profileModal .btn-reset {
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: Rufina;
+    font-size: 1.2rem;
+    padding: 0.625rem 1.25rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    flex-grow: 1;
+    transition: all 0.3s;
+}
+
+#profileModal .btn-reset:hover {
+    background-color: #e0e0e0;
+    border-color: #ccc;
+}
+
+#profileModal .btn-logout {
+    background-color: #f44336;
+    color: white;
+    padding: 0.625rem 1.25rem;
+    font-family: Rufina;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+#profileModal .btn-logout:hover {
+    background-color: #d32f2f;
+}
+
+/* Разделительная линия перед кнопкой выхода */
+.profile-divider {
+    border-top: 2px solid #d3c3c3;
+    margin: 1.25rem 0;
+}
+
+/* Аватар пользователя */
+.user-icon img {
+    width: 3.563rem;
+    height: 3.313rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.user-icon:hover {
+    transform: scale(1.1);
+}
+
+.user-icon span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.user-avatar {
+    width: 3.563rem;
+    height: 3.313rem;
+    object-fit: cover;
+}
+
+/* Кнопка админа */
+.btn-admin {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+}
+
+.btn-admin:hover {
+    transform: scale(1.1);
+}
+
+.btn-admin img {
+    width: 3.563rem;
+    height: 3.313rem;
+}
+
+.admin-icon {
+    width: 3.563rem;
+    height: 3.313rem;
+    filter: invert(50%);
+}
+
+.dark-theme .admin-icon {
+    filter: invert(90%);
+}

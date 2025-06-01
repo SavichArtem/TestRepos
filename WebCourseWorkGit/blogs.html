@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="blogs_title">Blogs</title>
+
+    <link rel="stylesheet" href="./css/blogs.css">
+    <link rel="stylesheet" href="./css/dark_themes/blogs_dark.css">
+    <link rel="stylesheet" href="./css/auth.css">
+    <link rel="stylesheet" href="./css/dark_themes/profile_dark.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="./css/dark_themes/cart_dark.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="stylesheet" href="./css/preloader/preloader.css">
+    <script defer src="./js/night-theme.js"></script>
+
+    <link rel="icon" type="image/png" href="./favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicons/favicon.svg" />
+    <link rel="shortcut icon" href="./favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="FoodZero" />
+    <link rel="manifest" href="./favicons/site.webmanifest" />
+</head>
+<body>
+   <script>
+        const theme = localStorage.getItem("theme")
+        if(theme){
+          document.body.classList.add(theme)
+        }
+      </script>
+
+    <div class="mask">
+        <div class="loader"></div>
+    </div>
+
+    <div id="myNav" class="navigation">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="./assets/NaviClose.png" alt="NaviClose"></a>
+        <div class="navigation-content">
+            <ul class="navigation-ul">
+                <li class="navigation-item"><a href="./main.html" data-lang="nav_text1">Home</a></li>
+                <li class="navigation-item"><a href="./menu.html" data-lang="nav_text2">Menu</a></li>
+                <li class="navigation-item-active navigation-item-blogs"><a href="./blogs.html" data-lang="nav_text3">Blogs</a></li>
+                <li class="navigation-item"><a href="./about.html" data-lang="nav_text6">About</a></li>
+                <li class="navigation-item"><a href="./contact.html" data-lang="nav_text7">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navigation-socials">
+            <div class="navigation-socials-text">
+                <h3 data-lang="nav_text8">Contact</h3>
+                <img src="./assets/LineNav.png" alt="LineNav">
+            </div>
+            <div class="navigation-socials-phone">
+                <p>+86 852 346 000</p>
+                <p>info@foodzero.com</p>
+            </div>
+            <div class="navigation-socials-address">
+                <p>1959 Sepulveda Blvd. </p>
+                <p>Culver City, CA, 90230</p>
+            </div>
+            <ul class="navigation-socials-list">
+                <li class="navigation-social-item"><a href="https://www.instagram.com/"><img src="./assets/Icon_instagram.svg" alt="Icon_instagram"></a></li>
+                <li class="navigation-social-item"><a href="https://x.com/"><img src="./assets/Icon_twitter.svg" alt="Icon_twitter"></a></li>
+                <li class="navigation-social-item"><a href="https://www.facebook.com/"><img src="./assets/Icon_facebook.svg" alt="Icon_facebook"></a></li>
+                <li class="navigation-social-item"><a href="https://www.youtube.com/"><img src="./assets/Icon_youtube.svg" alt="Icon_youtube"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_and_heroSection">
+         <header>
+            <img src="./assets/Logo.png" alt="Logo" class="Logo" />
+            <img src="./assets/NaviOpen.svg" alt="NaviOpen" onclick="openNav()" class="nav-btn" />
+            <button class="night-theme-btn" id="night-theme-btn">
+              <img src="./assets/Moon.svg" alt="Moon" class="moon">
+              <img src="./assets/sun.png" alt="Sun" class="sun">
+            </button>
+            <button class="header-basket-btn">
+              <img src="./assets/white_basket.png" alt="basket">
+            </button>
+            <button class="header_btn" data-btn="ru">Ru</button>
+            <button class="header_btn" data-btn="en">En</button>
+            <p>+86 852 346 000</p>
+            <div id="authControls">
+            <button class="reservations_btn" id="reservationBtn" data-lang="header_text">Reservation</button>
+            </div>          
+        </header>
+          <section class="hero_section">
+            <div class="hero_container">
+                <h1 data-lang="hero_text1">Blog List</h1>
+                <p data-lang="hero_text2">It is easy way to create your beautiful blog for daily</p>
+            </div>
+          </section>
+    </div>
+    <main>
+        <div class="blogs_container">
+            <div class="blogs_link">
+                <h3 class="text_container">
+                <a href="main.html"><span data-lang="home_link_text">Home</span></a>
+                <span class="separator">/</span>
+                <a href="blogs.html"><span class="Blog_link" data-lang="blogs_link_text">Blogs</span></a>
+                </h3>
+            </div>
+        <article class="recent_post_container">
+          <article class="post_card_1">
+            <article class="imgPost">
+              <img src="./assets/Blogs_firsh_blog_img.png" alt="Post_Image_1" />
+              <button>Fashion</button>
+            </article>
+            <article class="post_card_text">
+              <ul class="post_card_user">
+                <li class="post_card_user_avatar">
+                  <img src="./assets/Avatar_Post1.png" alt="Avatar_Post1" />
+                  <p data-lang="post_text1">Julie Christie</p>
+                </li>
+                <article class="post_card_user_inf">
+                  <li data-lang="post_post1_text2">October 17,2021</li>
+                  <li>3:33 pm</li>
+                  <li data-lang="post_post1_text3">2 comments</li>
+                </article>
+              </ul>
+              <article class="post_card_comment">
+                <h4 data-lang="post_text4">Vegan Baked Oatmeal with Fresh Berries</h4>
+                <img src="./assets/Line.png" alt="Line" class="accessibility-keep" />
+                <p data-lang="post_text5">Making Delicious Vegan Baked Oatmeal with Fresh Berries</p>
+              </article>
+              <article class="post_card_readMore">
+                <a href="" data-lang="post_post1_text6">Read More</a><img src="./assets/Icon_arrow-right.png" alt="Icon_arrow-right" class="accessibility-keep"/>
+              </article>
+            </article>
+          </article>
+          <article class="post_card_2">
+            <article class="imgPost">
+              <img src="./assets/Blogs_second_blog_img.png" alt="Post_Image_2" />
+              <button>Fashion</button>
+            </article>
+            <article class="post_card_text">
+              <ul class="post_card_user">
+                <li class="post_card_user_avatar">
+                  <img src="./assets/AvatarBlog2.png" alt="AvatarBlog2" />
+                  <p data-lang="post_text7">Cody Fisher</p>
+                </li>
+                <article class="post_card_user_inf">
+                  <li data-lang="post_post2_text2">October 17,2021</li>
+                  <li>3:33 pm</li>
+                  <li data-lang="post_post2_text3">2 comments</li>
+                </article>
+              </ul>
+              <article class="post_card_comment">
+                <h4 data-lang="post_text8">Three Ideas for Cooking Goat Meat at Home</h4>
+                <img src="./assets/Line.png" alt="Line" class="accessibility-keep" />
+                <p data-lang="post_text9">Learn the Three Ideas to Cook Goat Meat at Home</p>
+              </article>
+              <article class="post_card_readMore">
+                <a href="/blog.html" data-lang="post_post2_text6">Read More</a><img src="./assets/Icon_arrow-right.png" alt="Icon_arrow-right" class="accessibility-keep"/>
+              </article>
+            </article>
+          </article>
+        </article>
+        </div>
+    </main>
+    <footer class="footer">
+        <article class="footer_container">
+          <article class="footer_logo">
+            <h2>Food
+              Zero.</h2>
+          </article>
+          <article class="footer_content">
+            <h5 data-lang="footer_text1">Contact</h5>
+            <p class="footer_content_phone">
+              +1+86 852 346 000
+              <br>
+              info@foodzero.com
+            </p>
+            <p class="footer_content_address">
+              1959 Sepulveda Blvd. 
+              <br>
+              Culver City, CA, 90230
+            </p>
+          </article>
+          <article class="footer_form">
+            <h5 data-lang="footer_text2">Never Miss a Recipe</h5>
+            <form action="#"  class="footer_form_box">
+              <input type="email" name="email" placeholder="Email Address">
+              <button data-lang="footer_text4">Subscribe</button>
+            </form>
+            <p data-lang="footer_text3">Join our subscribers and get best recipe delivered each week!</p>
+          </article>
+        </article>
+      <img src="./assets/Footer_line.png" alt="footer_line" class="footer_line_img accessibility-keep">
+      <article class="footer_copyright">
+          <article class="footer_copyright_container">
+            <p data-lang="footer_text5">© 2020 Zero Inc. All rights Reserved</p>
+            <article class="footer_copyright_icons">
+              <img src="./assets/Icon_instagram.svg" alt="Icon_instagram" class="accessibility-keep">
+              <img src="./assets/Icon_twitter.svg" alt="Icon_twitter" class="accessibility-keep">
+              <img src="./assets/Icon_facebook.svg" alt="Icon_facebook" class="accessibility-keep">
+              <img src="./assets/Icon_youtube.svg" alt="Icon_youtube" class="accessibility-keep">
+            </article>
+          </article>
+      </article>
+    </footer>
+    <div class="modal" id="profileModal" style="display: none;">
+    <div class="modal-content">
+        <span class="closeBtn">&times;</span>
+        <h2 data-lang="profile_text1">Your Profile</h2>
+        <form id="profileForm">
+            <div class="form-group">
+                <h3 data-lang="profile_text2">First Name</h3>
+                <input type="text" id="profileFirstName" required>
+            </div>
+            <div class="form-group">
+                <h3 data-lang="profile_text3">Last Name</h3>
+                <input type="text" id="profileLastName" required>
+            </div>
+            <div class="form-group">
+                <h3 data-lang="profile_text9">Username</h3>
+                <input type="text" id="profileUsername" required>
+                <div id="profileUsernameError" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <h3 data-lang="profile_text10">Password</h3>
+                <input type="text" id="profilePassword" readonly>
+            </div>
+            <div class="form-group">
+                <h3 data-lang="profile_text4">Email</h3>
+                <input type="email" id="profileEmail" required>
+                <div id="profileEmailError" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <h3 data-lang="profile_text5">Phone</h3>
+                <input type="tel" id="profilePhone" required>
+                <div id="profilePhoneError" class="error-message"></div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn-save" data-lang="profile_text6">Save</button>
+                <button type="button" id="resetProfile" class="btn-reset" data-lang="profile_text7">Reset</button>
+            </div>
+            <div class="profile-divider"></div>
+            <button type="button" id="logoutBtn" class="btn-logout" data-lang="profile_text8">Logout</button>
+        </form>
+    </div>
+</div>
+    <script src="./js/changeLanguage.js" type="module"></script>
+    <script src="./js/authentication/profileModal.js" type="module"></script>
+    <script src="./js/authentication/userManager.js" type="module"></script>
+    <script src="./js/authentication/authGuard.js"></script>
+    <script src="./js/authentication/auth.js" type="module"></script>
+    <script src="./js/cart/cart.js" type="module"></script>
+    <script src="./js/cart/cart-modal.js" type="module"></script>
+    <script src="./js/cart/init-cart.js" type="module"></script>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/preloader.js"></script>
+</body>
+</html>

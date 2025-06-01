@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+  .accessibility-panel {
+    padding: 1rem;
+    max-height: 200vh;
+    max-width: 200.5vw;
+    overflow-y: auto;
+  }
+  
+  .accessibility-controls {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+  
+  .accessibility-toggle {
+    grid-column: 1 !important;
+    width: 100%;
+  }
+  
+  .control-group {
+    margin-bottom: 1rem;
+  }
+  
+  .control-options {
+    flex-wrap: wrap;
+  }
+  
+  .control-options button {
+    flex: 100 0 40%;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    padding: 0.5rem;
+  }
+}

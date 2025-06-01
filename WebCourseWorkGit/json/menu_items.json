@@ -1,0 +1,96 @@
+{
+  "menuItems": [
+    {
+      "name": "Grilled Okra and Tomatoes",
+      "nameKey": "starters_text3",
+      "description": "Grilled Okra and Tomatoes Delight",
+      "descriptionKey": "starters_text4",
+      "price": 20,
+      "category": "starters",
+      "image": "grilled_okra_and_tomatoes.jpg",
+      "id": "1"
+    },
+    {
+      "name": "Cucumber Salad",
+      "nameKey": "starters_text5",
+      "description": "Try this delicious Cucumber Salad",
+      "descriptionKey": "starters_text6",
+      "price": 18,
+      "category": "starters",
+      "image": "cucumber-salad.jpg",
+      "id": "2"
+    },
+    {
+      "name": "Basil Pancakes",
+      "nameKey": "starters_text7",
+      "description": "Basil Pancakes - a delicious breakfast",
+      "descriptionKey": "starters_text8",
+      "price": 12,
+      "category": "starters",
+      "image": "basil-pancakes.jpg",
+      "id": "3"
+    },
+    {
+      "name": "Deep Sea Snow White Cod Fillet",
+      "nameKey": "mains_text3",
+      "description": "Delicious Deep Sea Snow White Cod Fillet",
+      "descriptionKey": "mains_text4",
+      "price": 20,
+      "category": "mains",
+      "image": "cod-fillet.jpg",
+      "id": "4"
+    },
+    {
+      "name": "Steak With Rosemary Butter",
+      "nameKey": "mains_text5",
+      "description": "Enjoy a Steak With Rosemary Butter",
+      "descriptionKey": "mains_text6",
+      "price": 22,
+      "category": "mains",
+      "image": "steak-rosemary.jpg",
+      "id": "5"
+    },
+    {
+      "name": "Steaks with Grilled Kimchi",
+      "nameKey": "mains_text7",
+      "description": "Delicious Steaks with Grilled Kimchi",
+      "descriptionKey": "mains_text8",
+      "price": 20,
+      "category": "mains",
+      "image": "kimchi.jpg",
+      "id": "6"
+    },
+    {
+      "name": "Wine Pairing",
+      "nameKey": "pastries_text3",
+      "description": "Try our delicious Wine Pairing",
+      "descriptionKey": "pastries_text4",
+      "price": 158,
+      "category": "pastries",
+      "image": "wine-pairing.jpg",
+      "id": "7"
+    },
+    {
+      "name": "Natural Wine Pairing",
+      "nameKey": "pastries_text5",
+      "description": "The art of Natural Wine Pairings",
+      "descriptionKey": "pastries_text6",
+      "price": 168,
+      "category": "pastries",
+      "image": "natural-wine.jpg",
+      "id": "8"
+    },
+    {
+      "name": "Whisky Flyer",
+      "nameKey": "pastries_text7",
+      "description": "Enjoy a Whisky Flyer",
+      "descriptionKey": "pastries_text8",
+      "price": 92,
+      "category": "pastries",
+      "image": "whisky.jpg",
+      "id": "9"
+    }
+  ],
+  "carts": [],
+  "users": []
+}
