@@ -95,7 +95,25 @@
                     <h2 data-lang="products_management">Products Management</h2>
                     <button id="addProductBtn" class="btn-primary" data-lang="add_product">Add Product</button>
                 </div>
-                <div class="products-list" id="productsList"></div>
+                <div class="products-list" id="productsList">
+                    <div class="product-card">
+            <div class="product-image-wrapper">
+                <img src="./assets/grilled_okra_and_tomatoes.jpg" alt="Croissant">
+            </div>
+            <div class="product-details">
+                <h3>Grilled Okra and Tomatoes</h3>
+                <p class="product-description">Grilled Okra and Tomatoes Delight</p>
+                <div class="product-footer">
+                    <span class="product-price">$20.00</span>
+                    <span class="product-category">Starters</span>
+                </div>
+                <div class="product-actions">
+                    <button class="btn btn-edit" data-id="2">Edit</button>
+                    <button class="btn btn-delete" data-id="2">Delete</button>
+                </div>
+            </div>
+        </div>
+                </div>
                 <div class="pagination-controls">
                     <button id="prevPage" class="pagination-btn" data-lang="previous">Previous</button>
                     <span id="currentPage"></span>
@@ -260,7 +278,6 @@
     <script src="./js/changeLanguage.js" type="module"></script>
     <script src="./js/authentication/profileModal.js" type="module"></script>
     <script src="./js/authentication/userManager.js" type="module"></script>
-    <script src="./js/admin/admin.js" type="module"></script>
     <script src="./js/cart/cart.js" type="module"></script>
     <script src="./js/cart/cart-modal.js" type="module"></script>
     <script src="./js/cart/init-cart.js" type="module"></script>
