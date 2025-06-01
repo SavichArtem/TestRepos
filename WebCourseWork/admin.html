@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="admin_title">Admin Panel</title>
+    <link rel="stylesheet" href="./css/dark_themes/cart_dark.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="./css/dark_themes/profile_dark.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/auth.css">
+    <link rel="stylesheet" href="./css/dark_themes/admin_dark.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="stylesheet" href="./css/preloader/preloader.css">
+    <script defer src="./js/night-theme.js"></script>
+
+    <link rel="icon" type="image/png" href="./favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicons/favicon.svg" />
+    <link rel="shortcut icon" href="./favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="FoodZero" />
+    <link rel="manifest" href="./favicons/site.webmanifest" />
+</head>
+
+<body>
+    <script>
+        const theme = localStorage.getItem("theme")
+        if (theme) {
+            document.body.classList.add(theme)
+        }
+    </script>
+
+    <div class="mask">
+        <div class="loader"></div>
+    </div>
+    <div id="myNav" class="navigation">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="./assets/NaviClose.png"
+                alt="NaviClose"></a>
+        <div class="navigation-content">
+            <ul class="navigation-ul">
+                <li class="navigation-item"><a href="./main.html" data-lang="nav_text1">Home</a></li>
+                <li class="navigation-item"><a href="./menu.html" data-lang="nav_text2">Menu</a></li>
+                <li class="navigation-item navigation-item-blogs"><a href="./blogs.html" data-lang="nav_text3">Blogs</a></li>
+                <li class="navigation-item"><a href="./about.html" data-lang="nav_text6">About</a></li>
+                <li class="navigation-item"><a href="./contact.html" data-lang="nav_text7">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navigation-socials">
+            <div class="navigation-socials-text">
+                <h3 data-lang="nav_text8">Contact</h3>
+                <img src="./assets/LineNav.png" alt="LineNav">
+            </div>
+            <div class="navigation-socials-phone">
+                <p>+86 852 346 000</p>
+                <p>info@foodzero.com</p>
+            </div>
+            <div class="navigation-socials-address">
+                <p>1959 Sepulveda Blvd. </p>
+                <p>Culver City, CA, 90230</p>
+            </div>
+            <ul class="navigation-socials-list">
+                <li class="navigation-social-item"><a href="https://www.instagram.com/"><img
+                            src="./assets/Icon_instagram.svg" alt="Icon_instagram"></a></li>
+                <li class="navigation-social-item"><a href="https://x.com/"><img src="./assets/Icon_twitter.svg"
+                            alt="Icon_twitter"></a></li>
+                <li class="navigation-social-item"><a href="https://www.facebook.com/"><img
+                            src="./assets/Icon_facebook.svg" alt="Icon_facebook"></a></li>
+                <li class="navigation-social-item"><a href="https://www.youtube.com/"><img
+                            src="./assets/Icon_youtube.svg" alt="Icon_youtube"></a></li>
+            </ul>
+        </div>
+    </div>
+    <header>
+        <img src="./assets/Logo.png" alt="Logo" class="Logo" />
+        <img src="./assets/NaviOpen.svg" alt="NaviOpen" onclick="openNav()" class="nav-btn" />
+        <button class="night-theme-btn" id="night-theme-btn">
+            <img src="./assets/Moon.svg" alt="Moon" class="moon">
+            <img src="./assets/sun.png" alt="Sun" class="sun">
+        </button>
+        <button class="header-basket-btn">
+            <img src="./assets/white_basket.png" alt="basket">
+        </button>
+        <button class="header_btn" data-btn="ru">Ru</button>
+        <button class="header_btn" data-btn="en">En</button>
+        <p>+86 852 346 000</p>
+        <div id="authControls">
+            <button class="reservations_btn" id="reservationBtn" data-lang="header_text">Reservation</button>
+        </div>
+    </header>
+    <div class="admin-container">
+        <main class="admin-main">
+            <section class="products-section">
+                <div class="products-header">
+                    <h2 data-lang="products_management">Products Management</h2>
+                    <button id="addProductBtn" class="btn-primary" data-lang="add_product">Add Product</button>
+                </div>
+                <div class="products-list" id="productsList"></div>
+                <div class="pagination-controls">
+                    <button id="prevPage" class="pagination-btn" data-lang="previous">Previous</button>
+                    <span id="currentPage"></span>
+                    <button id="nextPage" class="pagination-btn" data-lang="next">Next</button>
+                </div>
+            </section>
+        </main>
+
+        <div class="modal" id="productModal" style="display: none;">
+            <div class="modal-content">
+                <h2 id="modalTitle" data-lang="add_product">Add New Product</h2>
+                <form id="productForm">
+                    <input type="hidden" id="productId">
+
+                    <div class="form-group">
+                        <label for="productName" data-lang="product_name">Name</label>
+                        <input type="text" id="productName" required>
+                        <div id="productNameError" class="error-message"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productNameKey" data-lang="name_translation_key">Name Translation Key</label>
+                        <input type="text" id="productNameKey" required>
+                        <div id="productNameKeyError" class="error-message"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productDescription" data-lang="description">Description</label>
+                        <textarea id="productDescription" required></textarea>
+                        <div id="productDescriptionError" class="error-message"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productDescriptionKey" data-lang="description_translation_key">Description
+                            Translation Key</label>
+                        <input type="text" id="productDescriptionKey" required>
+                        <div id="productDescriptionKeyError" class="error-message"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productPrice" data-lang="price">Price ($)</label>
+                        <input type="number" id="productPrice" min="0" step="0.01" required>
+                        <div id="productPriceError" class="error-message"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productCategory" data-lang="category">Category</label>
+                        <select id="productCategory" required>
+                            <option value="starters" data-lang="category_starters">Starters</option>
+                            <option value="mains" data-lang="category_mains">Mains</option>
+                            <option value="pastries" data-lang="category_pastries">Pastries</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productImage">Image URL</label>
+                        <input type="text" id="productImage" required>
+                        <div id="productImageError" class="error-message"></div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" id="saveProductBtn" class="btn-save" data-lang="save">Save</button>
+                        <button type="button" id="cancelProductBtn" class="btn-cancel"
+                            data-lang="cancel">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="modalAdmin" id="confirmModal" style="display: none;">
+            <div class="modalAdmin-content confirm-modal">
+                <h3 id="confirmMessage" data-lang="confirm_delete">Are you sure you want to delete this product?</h3>
+                <div class="confirm-actions">
+                    <button id="confirmDeleteBtn" class="btn-danger" data-lang="delete">Delete</button>
+                    <button id="cancelDeleteBtn" class="btn-cancel" data-lang="cancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <article class="footer_container">
+            <article class="footer_logo">
+                <h2>Food
+                    Zero.</h2>
+            </article>
+            <article class="footer_content">
+                <h5 data-lang="footer_text1">Contact</h5>
+                <p class="footer_content_phone">
+                    +1+86 852 346 000
+                    <br>
+                    info@foodzero.com
+                </p>
+                <p class="footer_content_address">
+                    1959 Sepulveda Blvd.
+                    <br>
+                    Culver City, CA, 90230
+                </p>
+            </article>
+            <article class="footer_form">
+                <h5 data-lang="footer_text2">Never Miss a Recipe</h5>
+                <form action="#" class="footer_form_box">
+                    <input type="email" name="email" placeholder="Email Address">
+                    <button data-lang="footer_text4">Subscribe</button>
+                </form>
+                <p data-lang="footer_text3">Join our subscribers and get best recipe delivered each week!</p>
+            </article>
+        </article>
+        <img src="./assets/Footer_line.png" alt="footer_line" class="footer_line_img">
+        <article class="footer_copyright">
+            <article class="footer_copyright_container">
+                <p data-lang="footer_text5">© 2020 Zero Inc. All rights Reserved</p>
+                <article class="footer_copyright_icons">
+                    <img src="./assets/Icon_instagram.svg" alt="Icon_instagram">
+                    <img src="./assets/Icon_twitter.svg" alt="Icon_twitter">
+                    <img src="./assets/Icon_facebook.svg" alt="Icon_facebook">
+                    <img src="./assets/Icon_youtube.svg" alt="Icon_youtube">
+                </article>
+            </article>
+        </article>
+    </footer>
+    <div class="modal" id="profileModal" style="display: none;">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+            <h2 data-lang="profile_text1">Your Profile</h2>
+            <form id="profileForm">
+                <div class="form-group">
+                    <h3 data-lang="profile_text2">First Name</h3>
+                    <input type="text" id="profileFirstName" required>
+                </div>
+                <div class="form-group">
+                    <h3 data-lang="profile_text3">Last Name</h3>
+                    <input type="text" id="profileLastName" required>
+                </div>
+                <div class="form-group">
+                    <h3 data-lang="profile_text9">Username</h3>
+                    <input type="text" id="profileUsername" required>
+                    <div id="profileUsernameError" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <h3 data-lang="profile_text10">Password</h3>
+                    <input type="text" id="profilePassword" readonly>
+                </div>
+                <div class="form-group">
+                    <h3 data-lang="profile_text4">Email</h3>
+                    <input type="email" id="profileEmail" required>
+                    <div id="profileEmailError" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <h3 data-lang="profile_text5">Phone</h3>
+                    <input type="tel" id="profilePhone" required>
+                    <div id="profilePhoneError" class="error-message"></div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-save" data-lang="profile_text6">Save</button>
+                    <button type="button" id="resetProfile" class="btn-reset" data-lang="profile_text7">Reset</button>
+                </div>
+                <div class="profile-divider"></div>
+                <button type="button" id="logoutBtn" class="btn-logout" data-lang="profile_text8">Logout</button>
+            </form>
+        </div>
+    </div>
+    <script src="./js/changeLanguage.js" type="module"></script>
+    <script src="./js/authentication/profileModal.js" type="module"></script>
+    <script src="./js/authentication/userManager.js" type="module"></script>
+    <script src="./js/admin/admin.js" type="module"></script>
+    <script src="./js/authentication/authGuard.js"></script>
+    <script src="./js/cart/cart.js" type="module"></script>
+    <script src="./js/cart/cart-modal.js" type="module"></script>
+    <script src="./js/cart/init-cart.js" type="module"></script>
+    <script src="./js/preloader.js"></script>
+    <script src="./js/navigation.js"></script>
+</body>
+</html>

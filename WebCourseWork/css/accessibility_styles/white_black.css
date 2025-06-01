@@ -1,0 +1,110 @@
+.color-white-black header,
+.color-white-black footer,
+.color-white-black .hero_section,
+.color-white-black .chef_section,
+.color-white-black .reservation_section,
+.color-white-black .features_section,
+.color-white-black .category_section,
+.color-white-black .testimonials,
+.color-white-black .recent_post_section,
+.color-white-black .menu_section {
+  background-color: black !important;
+  color: white !important;
+  border: none !important;
+}
+
+.color-white-black .priceList img,
+.color-white-black .hero_scroll_default,
+.color-white-black .post_card_comment,
+.color-white-black .swiper-pagination,
+.color-white-black .testimonials_control,
+.color-white-black .footer_line_img,
+.color-white-black .footer_copyright_icons,
+.color-white-black .post_card_readMore img{
+filter: brightness(0) invert(1);
+}
+
+.color-white-black .footer_form_box button,
+.color-white-black .imgPost button{
+    color: white !important;    
+    background-color: #191919;
+}
+
+.color-white-black .accessibility-toggle{
+  color: white !important;
+  background-color: #191919 !important;
+}
+
+.color-white-black .accessibility-panel.color-white-black .control-options button.active{
+  background-color: black !important;
+}
+
+
+.color-white-black .chef_section{
+    background-image: url('/assets/leaf_dark_theme.png');
+}
+
+.color-white-black input{
+    border: white solid;
+}
+
+.color-white-black .block_inf a{
+    color: white !important;
+}
+
+.color-white-black .block_inf img{
+    filter: invert(100%);
+}
+
+.color-white-black input::placeholder{
+    color: white !important;
+}
+
+.color-white-black select{
+    border: white solid;
+    background-color: transparent;
+}
+
+.color-white-black .reservation_text h3{
+    margin-left: 21rem;
+}
+
+.color-white-black h1,
+.color-white-black h2,
+.color-white-black h3,
+.color-white-black h4,
+.color-white-black h5,
+.color-white-black p,
+.color-white-black a,
+.color-white-black li,
+.color-white-black button,
+.color-white-black input,
+.color-white-black select,
+.color-white-black option {
+  color: white !important;
+}
+
+.accessibility-panel.color-white-black {
+  background: black !important;
+  color: white !important;
+  border-bottom: 2px solid white;
+}
+
+.accessibility-panel.color-white-black .accessibility-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.accessibility-panel.color-white-black .accessibility-close {
+  color: white;
+}
+
+.accessibility-panel.color-white-black .control-options button {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.accessibility-panel.color-white-black .control-options button.active {
+  background: #5E6600;
+  color: white;
+}

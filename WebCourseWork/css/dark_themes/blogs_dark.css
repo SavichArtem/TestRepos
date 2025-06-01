@@ -1,0 +1,74 @@
+body{
+    transition: background-image .4s ease-in-out; 
+    transition: background-color .4s, color .4s;
+}
+
+body.night-theme{
+    background: #191919;
+    color: var(--FFFFFF, #FFF);
+}
+
+header{
+    transition: background-color .4s, color .4s;
+}
+
+body.night-theme footer{
+    background-color: #000000;
+}
+
+footer{
+    transition: background-color .4s, color .4s;    
+}
+
+.hero_section{
+    transition: background-color .4s, color .4s;
+}
+
+body.night-theme .header_and_heroSection{
+    background-image: url("../../assets/blogs_dark.png"); 
+    transition: background-image .4s ease-in-out; 
+}
+
+body.night-theme h2,
+body.night-theme h1,
+body.night-theme h3,
+body.night-theme h4,
+body.night-theme p,
+body.night-theme a,
+body.night-theme li,
+body.night-theme span,
+body.night-theme input::placeholder{
+    color: white !important;
+}
+
+body.night-theme .navigation .navigation-item-active a{
+    color: #9CAA00 !important;
+}
+
+body.night-theme .navigation {
+    background-image: url("../../assets/nav_dark.png");
+}
+
+body.night-theme .moon{
+    opacity: 0;
+}
+
+body.night-theme .sun{
+    opacity: 1;
+}
+
+body.night-theme .post_card_comment img{
+    filter: brightness(0) invert(1);
+}
+
+body.night-theme .post_card_readMore img{
+    filter: brightness(0) invert(1);
+}
+
+body.night-theme footer button{
+    background-color: #191919 !important;
+}
+
+body.night-theme .imgPost button{
+    background-color: black;
+}

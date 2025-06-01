@@ -199,6 +199,7 @@ header .reservations_btn {
     max-width: 90rem;
     position: absolute;
     right: 7.2%;
+    height: 971px;
     top: 8.8%;
     z-index: 1;
 }

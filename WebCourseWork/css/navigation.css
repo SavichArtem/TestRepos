@@ -37,7 +37,7 @@ header .nav-btn {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.74rem;
+    gap: 1.8rem;
     list-style: none;
 }
 
@@ -96,11 +96,6 @@ header .nav-btn {
     text-transform: none;
 }
 
-.navigation-item-blogs{
-    display: grid;
-    grid-template-rows: 5.125rem 1.875rem 1.875rem;
-    row-gap: 0.75rem;
-}
 
 .navigation-item a{
     color: var(--FFFFFF, #FFF);
@@ -129,8 +124,8 @@ header .nav-btn {
     width: 18.563rem;
     flex-direction: column;
     align-items: flex-start;
-    left: 74.8%;
-    bottom: 4.8%;
+    left: 74.85%;
+    top: 3.8%;
 }
 
 .navigation-socials-text{

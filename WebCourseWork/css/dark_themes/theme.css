@@ -147,3 +147,27 @@ body.night-theme .moon{
 body.night-theme .sun{
     opacity: 1;
 }
+
+body.night-theme .accessibility-panel.default-panel{
+    background: #000000 !important;
+}
+
+body.night-theme .accessibility-panel.default-panel .control-options button.active{
+    background-color: black;
+}
+
+body.night-theme .accessibility-toggle{
+    background: #191919;
+}
+
+body.night-theme .accessibility-panel.default-panel{
+    border-bottom: 2px solid white;
+}
+
+body.night-theme footer button{
+    background-color: #191919 !important;
+}
+
+body.night-theme .imgPost button{
+    background-color: black;
+}

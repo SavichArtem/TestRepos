@@ -1,0 +1,59 @@
+.font-small {
+  font-size: 0.9rem !important;
+}
+
+.font-medium {
+  font-size: 1rem !important;
+}
+
+.font-large {
+  font-size: 1.2rem !important;
+}
+
+.font-small .accessibility-close,
+.font-medium .accessibility-close,
+.font-large .accessibility-close{
+  font-size: 2.5rem !important;
+}
+
+body.font-small,
+body.font-small * {
+  font-size: 0.9rem !important;
+}
+
+body.font-medium,
+body.font-medium * {
+  font-size: 1rem !important;
+}
+
+body.font-large,
+body.font-large * {
+  font-size: 1.2rem !important;
+}
+
+body.font-small h1,
+body.font-small h2,
+body.font-small h3,
+body.font-small h4,
+body.font-small h5,
+body.font-small h6 {
+  font-size: calc(0.9rem * 2.5) !important;
+}
+
+body.font-medium h1,
+body.font-medium h2,
+body.font-medium h3,
+body.font-medium h4,
+body.font-medium h5,
+body.font-medium h6 {
+  font-size: calc(1rem * 2.5) !important;
+}
+
+body.font-large h1,
+body.font-large h2,
+body.font-large h3,
+body.font-large h4,
+body.font-large h5,
+body.font-large h6 {
+  font-size: calc(1.2rem * 2.5) !important;
+}

@@ -20,6 +20,15 @@ body {
     background-image: url("../assets/about_background.png");
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+}
+
+.parallax-mask{
+    position: absolute;
+    inset: 0;
+    mask: url('/assets/parallax_about.svg');
+    mask-position: bottom;
+    mask-size: cover;
 }
 
 /* Header */
@@ -141,6 +150,7 @@ header .reservations_btn {
 /* HeroSection */
 
 .hero_section {
+    position: fixed;
     width: 120rem;
     height: 54.5rem;
     margin: 0 auto;

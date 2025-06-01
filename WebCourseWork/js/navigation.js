@@ -6,4 +6,5 @@ function openNav() {
 function closeNav() {
     document.getElementById("myNav").style.width = "0%"
     document.body.style.overflow = "visible";
+    document.body.style.overflowX ="hidden";
 }

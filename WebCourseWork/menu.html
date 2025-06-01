@@ -6,8 +6,12 @@
     <title data-lang="menu_page_title">Menu</title>
 
     <link rel="stylesheet" href="./css/menu.css">
+        <link rel="stylesheet" href="./css/auth.css">
+        <link rel="stylesheet" href="./css/dark_themes/profile_dark.css">
     <link rel="stylesheet" href="./css/dark_themes/menu_dark.css" />
     <link rel="stylesheet" href="./css/preloader/preloader.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="./css/dark_themes/cart_dark.css">
     <link rel="stylesheet" href="./css/navigation.css">
     <script defer src="./js/night-theme.js"></script>
 
@@ -36,12 +40,7 @@
             <ul class="navigation-ul">
                 <li class="navigation-item"><a href="./main.html" data-lang="nav_text1">Home</a></li>
                 <li class="navigation-item-active"><a href="./menu.html" data-lang="nav_text2">Menu</a></li>
-                <li class="navigation-item navigation-item-blogs"><a href="" data-lang="nav_text3">Blogs</a>
-                    <ul class="navigation-blogs">
-                        <li><a href="" data-lang="nav_text4">1 Column</a></li>
-                        <li><a href="" data-lang="nav_text5">2 Columns</a></li>
-                    </ul>
-                </li>
+                <li class="navigation-item navigation-item-blogs"><a href="./blogs.html" data-lang="nav_text3">Blogs</a></li>
                 <li class="navigation-item"><a href="./about.html" data-lang="nav_text6">About</a></li>
                 <li class="navigation-item"><a href="./contact.html" data-lang="nav_text7">Contact</a></li>
             </ul>
@@ -81,8 +80,10 @@
             <button class="header_btn" data-btn="ru">Ru</button>
             <button class="header_btn" data-btn="en">En</button>
             <p>+86 852 346 000</p>
-            <button class="reservations_btn" data-lang="header_text">Reservation</button>
-          </header>
+<div id="authControls">
+            <button class="reservations_btn" id="reservationBtn" data-lang="header_text">Reservation</button>
+        </div>          
+    </header>
           <section class="hero_section">
             <div class="hero_container">
                 <h1 data-lang="hero_text1">View Our New Menu</h1>
@@ -91,6 +92,48 @@
           </section>
     </div>
     <main class="menu">
+        <section class="filters_section">
+            <div class="filters_container">
+                <div class="search_filter">
+                    <input type="text" id="searchInput" placeholder="Search..." data-lang="search_placeholder">
+                    <button type="button" id="searchButton" data-lang="search_button">Search</button>
+                </div> 
+                <div class="sort_filter">
+                    <select id="sortSelect">
+                        <option value="" data-lang="sort_default">Default sorting</option>
+                        <option value="price_asc" data-lang="sort_price_asc">Price (Low to High)</option>
+                        <option value="price_desc" data-lang="sort_price_desc">Price (High to Low)</option>
+                        <option value="name_asc" data-lang="sort_name_asc">Name (A-Z)</option>
+                        <option value="name_desc" data-lang="sort_name_desc">Name (Z-A)</option>
+                    </select>
+                </div>
+                
+                <div class="category_filter">
+                    <div class="category_buttons">
+                        <button class="category_btn active" data-category="all" data-lang="category_all">All</button>
+                        <button class="category_btn" data-category="starters" data-lang="category_starters">Starters</button>
+                        <button class="category_btn" data-category="mains" data-lang="category_mains">Mains</button>
+                        <button class="category_btn" data-category="pastries" data-lang="category_pastries">Pastries & Drinks</button>
+                    </div>
+                </div>
+                
+                <div class="advanced_filters">
+                    <div class="price_range">
+                        <h3 data-lang="price_range">Price Range</h3>
+                        <div class="range_inputs">
+                            <input type="number" id="minPrice" placeholder="Min" data-lang="min_price">
+                            <span>-</span>
+                            <input type="number" id="maxPrice" placeholder="Max" data-lang="max_price">
+                            <button id="applyPriceRange" data-lang="apply_button">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="noResultsMessage" class="no_results" style="display: none;" data-lang="no_results">
+                No products found matching your criteria.
+            </div>
+        </section>
         <section class="starters_section">
             <div class="starters_text">
                 <h2 data-lang="starters_text1">Starters</h2>
@@ -262,8 +305,56 @@
           </article>
       </article>
     </footer>
+<div class="modal" id="profileModal" style="display: none;">
+    <div class="modal-content">
+        <span class="closeBtn">&times;</span>
+        <h2 data-lang="profile_text1">Your Profile</h2>
+        <form id="profileForm">
+            <div class="form-group">
+                <h3 data-lang="profile_text2">First Name</h3>
+                <input type="text" id="profileFirstName" required>
+            </div>
+            <div class="form-group">
+                <h3 data-lang="profile_text3">Last Name</h3>
+                <input type="text" id="profileLastName" required>
+            </div>
+            <div class="form-group">
+                <h3 data-lang="profile_text9">Username</h3>
+                <input type="text" id="profileUsername" required>
+                <div id="profileUsernameError" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <h3 data-lang="profile_text10">Password</h3>
+                <input type="text" id="profilePassword" readonly>
+            </div>
+            <div class="form-group">
+                <h3 data-lang="profile_text4">Email</h3>
+                <input type="email" id="profileEmail" required>
+                <div id="profileEmailError" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <h3 data-lang="profile_text5">Phone</h3>
+                <input type="tel" id="profilePhone" required>
+                <div id="profilePhoneError" class="error-message"></div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn-save" data-lang="profile_text6">Save</button>
+                <button type="button" id="resetProfile" class="btn-reset" data-lang="profile_text7">Reset</button>
+            </div>
+            <div class="profile-divider"></div>
+            <button type="button" id="logoutBtn" class="btn-logout" data-lang="profile_text8">Logout</button>
+        </form>
+    </div>
+</div>
     <script src="./js/changeLanguage.js" type="module"></script>
+    <script src="./js/authentication/profileModal.js" type="module"></script>
+    <script src="./js/authentication/userManager.js" type="module"></script>
+    <script src="./js/cart/cart.js" type="module"></script>
+    <script src="./js/cart/cart-modal.js" type="module"></script>
+    <script src="./js/authentication/auth.js" type="module"></script>
+    <script src="./js/menu/menu.js" type="module"></script>
     <script src="./js/preloader.js"></script>
     <script src="./js/navigation.js"></script>
+    <script src="./js/authentication/validation.js" type="module"></script>
 </body>
 </html>

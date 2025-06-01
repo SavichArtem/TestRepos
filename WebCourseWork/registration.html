@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="registration_title">Registration</title>
+    <link rel="stylesheet" href="./css/registration.css">
+    <link rel="stylesheet" href="./css/dark_themes/registration_dark.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="./css/dark_themes/cart_dark.css">
+    <link rel="stylesheet" href="./css/preloader/preloader.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <script defer src="./js/night-theme.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="icon" type="image/png" href="./favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicons/favicon.svg" />
+    <link rel="shortcut icon" href="./favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="FoodZero" />
+    <link rel="manifest" href="./favicons/site.webmanifest" />
+</head>
+
+<body>
+    <script>
+        const theme = localStorage.getItem("theme")
+        if (theme) {
+            document.body.classList.add(theme)
+        }
+    </script>
+
+    <div class="mask">
+        <div class="loader"></div>
+    </div>
+    <div id="myNav" class="navigation">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="./assets/NaviClose.png"
+                alt="NaviClose"></a>
+        <div class="navigation-content">
+            <ul class="navigation-ul">
+                <li class="navigation-item"><a href="./main.html" data-lang="nav_text1">Home</a></li>
+                <li class="navigation-item"><a href="./menu.html" data-lang="nav_text2">Menu</a></li>
+                <li class="navigation-item navigation-item-blogs"><a href="./blogs.html" data-lang="nav_text3">Blogs</a></li>
+                <li class="navigation-item"><a href="./about.html" data-lang="nav_text6">About</a></li>
+                <li class="navigation-item"><a href="./contact.html" data-lang="nav_text7">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navigation-socials">
+            <div class="navigation-socials-text">
+                <h3 data-lang="nav_text8">Contact</h3>
+                <img src="./assets/LineNav.png" alt="LineNav">
+            </div>
+            <div class="navigation-socials-phone">
+                <p>+86 852 346 000</p>
+                <p>info@foodzero.com</p>
+            </div>
+            <div class="navigation-socials-address">
+                <p>1959 Sepulveda Blvd. </p>
+                <p>Culver City, CA, 90230</p>
+            </div>
+            <ul class="navigation-socials-list">
+                <li class="navigation-social-item"><a href="https://www.instagram.com/"><img
+                            src="./assets/Icon_instagram.svg" alt="Icon_instagram"></a></li>
+                <li class="navigation-social-item"><a href="https://x.com/"><img src="./assets/Icon_twitter.svg"
+                            alt="Icon_twitter"></a></li>
+                <li class="navigation-social-item"><a href="https://www.facebook.com/"><img
+                            src="./assets/Icon_facebook.svg" alt="Icon_facebook"></a></li>
+                <li class="navigation-social-item"><a href="https://www.youtube.com/"><img
+                            src="./assets/Icon_youtube.svg" alt="Icon_youtube"></a></li>
+            </ul>
+        </div>
+    </div>
+    <header>
+        <img src="./assets/Logo.png" alt="Logo" class="Logo" />
+        <img src="./assets/NaviOpen.svg" alt="NaviOpen" onclick="openNav()" class="nav-btn" />
+        <button class="night-theme-btn" id="night-theme-btn">
+            <img src="./assets/Moon.svg" alt="Moon" class="moon">
+            <img src="./assets/sun.png" alt="Sun" class="sun">
+        </button>
+        <button class="header-basket-btn">
+            <img src="./assets/white_basket.png" alt="basket">
+        </button>
+        <button class="header_btn" data-btn="ru">Ru</button>
+        <button class="header_btn" data-btn="en">En</button>
+        <p>+86 852 346 000</p>
+        <div id="authControls">
+            <button class="reservations_btn" id="reservationBtn" data-lang="header_text">Reservation</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1 data-lang="registration_form_title">Registration</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="phone" data-lang="phone_label">Phone (Belarus)*</label>
+                <input type="tel" id="phone" placeholder="+375XXXXXXXXX" required>
+                <div class="error-message" id="phoneError"></div>
+            </div>
+            <div class="form-group">
+                <label for="email" data-lang="email_label">Email*</label>
+                <input type="email" id="email" placeholder="example@mail.com" required>
+                <div class="error-message" id="emailError"></div>
+            </div>
+            <div class="form-group">
+                <label for="birthdate" data-lang="birthdate_label">Birthdate*</label>
+                <input type="date" id="birthdate" required>
+
+                <div class="error-message" id="birthdateError"></div>
+            </div>
+            <div class="form-group">
+                <label for="passwordMethod" data-lang="password_method_label">Password method*</label>
+                <select id="passwordMethod" required>
+                    <option value="" data-lang="password_method_option_1">Выберите способ</option>
+                    <option value="auto" data-lang="password_method_option_2">Автоматически</option>
+                    <option value="manual" data-lang="password_method_option_3">Вручную</option>
+                </select>
+            </div>
+            <div id="manualPasswordFields" style="display: none;">
+                <div class="form-group">
+                    <label for="password" data-lang="password_label">Пароль*</label>
+                    <input type="password" id="password" class="password-field" placeholder="Не менее 8 символов"
+                        minlength="8">
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword" data-lang="confirm_password_label">Подтвердите пароль*</label>
+                    <input type="password" id="confirmPassword" class="password-field" placeholder="Повторите пароль">
+                    <div class="error-message" id="confirmPasswordError"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lastName" data-lang="last_name_label">Фамилия*</label>
+                <input type="text" id="lastName" required>
+                <div class="error-message" id="lastNameError"></div>
+            </div>
+            <div class="form-group">
+                <label for="firstName" data-lang="first_name_label">Имя*</label>
+                <input type="text" id="firstName" required>
+                <div class="error-message" id="firstNameError"></div>
+            </div>
+            <div class="form-group">
+                <label for="middleName" data-lang="middle_name_label">Отчество</label>
+                <input type="text" id="middleName">
+            </div>
+            <div class="form-group">
+                <label for="username" data-lang="username_label">Никнейм*</label>
+                <div class="username-container">
+                    <input type="text" id="username" required>
+                    <button type="button" id="generateUsername" data-lang="generate_username_btn">Сгенерировать</button>
+                </div>
+                <div class="error-message" id="usernameError"></div>
+            </div>
+            <div class="form-group checkbox-group">
+                <label for="agreement">
+                    <input type="checkbox" id="agreement" required>
+                    <span data-lang="agreement_text">Я прочитал и согласен с</span>
+                    <a href="#" class="agreement-link" data-lang="user_agreement_link">пользовательским соглашением</a>*
+                </label>
+            </div>
+
+            <button type="submit" id="submitBtn" disabled data-lang="submit_btn">Зарегистрироваться</button>
+        </form>
+    </div>
+    <div id="agreementModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 data-lang="agreement_title">Пользовательское соглашение</h2>
+            <div class="agreement-text">
+                <p data-lang="agreement_intro">Регистрируясь на нашем сайте, вы соглашаетесь со следующими условиями:
+                </p>
+                <ol>
+                    <li data-lang="agreement_point1">Вы предоставляете достоверную информацию при регистрации</li>
+                    <li data-lang="agreement_point2">Вы не будете использовать сайт для незаконных целей</li>
+                    <li data-lang="agreement_point3">Администрация сайта может обрабатывать ваши персональные данные
+                    </li>
+                    <li data-lang="agreement_point4">Вы несете ответственность за сохранность своих учетных данных</li>
+                    <li data-lang="agreement_point5">Мы можем отправлять вам информационные сообщения</li>
+                </ol>
+                <p data-lang="agreement_conclusion">Соглашение вступает в силу с момента регистрации.</p>
+            </div>
+            <button class="agree-btn" data-lang="agreement_understand">Понятно</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <article class="footer_container">
+            <article class="footer_logo">
+                <h2>Food
+                    Zero.</h2>
+            </article>
+            <article class="footer_content">
+                <h5 data-lang="footer_text1">Contact</h5>
+                <p class="footer_content_phone">
+                    +1+86 852 346 000
+                    <br>
+                    info@foodzero.com
+                </p>
+                <p class="footer_content_address">
+                    1959 Sepulveda Blvd.
+                    <br>
+                    Culver City, CA, 90230
+                </p>
+            </article>
+            <article class="footer_form">
+                <h5 data-lang="footer_text2">Never Miss a Recipe</h5>
+                <form action="#" class="footer_form_box">
+                    <input type="email" name="email" placeholder="Email Address">
+                    <button data-lang="footer_text4">Subscribe</button>
+                </form>
+                <p data-lang="footer_text3">Join our subscribers and get best recipe delivered each week!</p>
+            </article>
+        </article>
+        <img src="./assets/Footer_line.png" alt="footer_line" class="footer_line_img">
+        <article class="footer_copyright">
+            <article class="footer_copyright_container">
+                <p data-lang="footer_text5">© 2020 Zero Inc. All rights Reserved</p>
+                <article class="footer_copyright_icons">
+                    <img src="./assets/Icon_instagram.svg" alt="Icon_instagram">
+                    <img src="./assets/Icon_twitter.svg" alt="Icon_twitter">
+                    <img src="./assets/Icon_facebook.svg" alt="Icon_facebook">
+                    <img src="./assets/Icon_youtube.svg" alt="Icon_youtube">
+                </article>
+            </article>
+        </article>
+    </footer>
+    <script src="./js/changeLanguage.js" type="module"></script>
+    <script src="./js/authentication/authGuard.js"></script>
+    <script src="./js/authentication/userManager.js" type="module"></script>
+    <script src="./js/cart/cart.js" type="module"></script>
+    <script src="./js/cart/cart-modal.js" type="module"></script>
+    <script src="./js/cart/init-cart.js" type="module"></script>
+    <script src="/js/authentication/validation.js" type="module"></script>
+    <script src="/js/authentication/usernameGenerator.js" type="module"></script>
+    <script src="/js/authentication/formSubmit.js" type="module"></script>
+    <script src="./js/preloader.js"></script>
+    <script src="./js/navigation.js"></script>
+</body>
+
+</html>

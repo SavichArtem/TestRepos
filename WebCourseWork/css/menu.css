@@ -20,6 +20,7 @@
         background-image: url("../assets/menu_background.png");
         background-size: cover;
         background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 
     /* Header */
@@ -177,22 +178,186 @@
 
     /* Menu */
 
-    .menu{
-        height: 371.125rem;
+    .starters_section,
+    .mains_section,
+    .pastries_and_drinks_section {
+        display: none;
+        width: 120rem;
+        margin: 0 auto;
+        padding-bottom: 5rem;
+        min-height: 50rem;
+        transition: height 0.3s ease;
+    }
+
+    .menu_content-body,
+    .menu_content-body-inverted,
+    .menu_content-body-pastries {
+        display: grid;
+        width: 44.375rem;
+        grid-template-rows: auto;
+        row-gap: 3.625rem;
+        padding-bottom: 3rem;
+    }
+
+    /* Добавляем автоматическое увеличение высоты */
+    .menu_content,
+    .menu_content-inverted,
+    .menu_content-pastries {
+        display: flex;
+        gap: 6.375rem;
+        margin-top: 5rem;
+        margin-left: 8.625rem;
+        min-height: 50rem;
+        /* Минимальная высота */
+    }
+
+     /* Filters Section */
+     .filters_section {
+        width: 120rem;
+        margin: 0 auto;
+        padding: 5rem 0;
+        background-color: #f9f9f9;
+        border-radius: 1rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+
+    .filters_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 8rem;
+        gap: 2rem;
+    }
+
+    .search_filter {
+        display: flex;
+        gap: 1rem;
+        width: 30rem;
+    }
+
+    .search_filter input {
+        flex: 1;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        font-family: 'Rufina', serif;
+        border-radius: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .search_filter button {
+        padding: 1rem 2rem;
+        background-color: #333;
+        color: white;
+        font-family: 'Rufina', serif;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+
+    .sort_filter select {
+        appearance: none;
+        background-image: url("../../assets/Icon_angle-down.png");
+        background-position: right 2.5rem center;
+        background-repeat: no-repeat;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 0.5rem;
+        font-family: 'Rufina', serif;
+        font-size: 1.5rem;
+        width: 25rem;
+    }
+
+    .category_filter {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .category_buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .category_btn {
+        padding: 1rem 2rem;
+        background-color: #e0e0e0;
+        font-family: 'Rufina', serif;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-size: 1.5rem;
+        transition: all 0.3s;
+    }
+
+    .category_btn.active {
+        background-color: #333;
+        color: white;
+    }
+
+    .advanced_filters {
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    .price_range {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .price_range h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-family: 'Rufina', serif;
+    }
+
+    .range_inputs {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .range_inputs input {
+        width: 10rem;
+        padding: 1rem;
+        font-family: 'Rufina', serif;
+        border: 1px solid #ddd;
+        border-radius: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .range_inputs button {
+        padding: 1rem 2rem;
+        background-color: #333;
+        color: white;
+        font-family: 'Rufina', serif;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+
+    .no_results {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-top: 3rem;
+        color: #666;
+        font-family: 'Rufina', serif;
+        display: none;
     }
 
     /* Menu Starters */
-    .starters_section{
-        width: 120rem;
-        height: 94rem;
+    .starters_section {
         background-image: url("../assets/Blueberry.png");
         background-position: 98.7% 0%;
         background-repeat: no-repeat;
         background-size: 27%;
-        margin: 0 auto;
     }
 
-    .starters_text{
+    .starters_text {
         display: flex;
         width: 46.75rem;
         flex-direction: column;
@@ -203,7 +368,7 @@
         padding-top: 7.625rem;
     }
 
-    .starters_text h2{
+    .starters_text h2 {
         color: var(--000000, rgba(0, 0, 0, 0.95));
         text-align: center;
         font-family: Rufina;
@@ -213,7 +378,7 @@
         line-height: 111.111%;
     }
 
-    .starters_text p{
+    .starters_text p {
         color: var(--4D4D4D, #000);
         text-align: center;
         font-family: Montserrat;
@@ -224,14 +389,14 @@
         letter-spacing: 0.03rem;
     }
 
-    .menu_content{
+    .menu_content {
         display: flex;
         gap: 6.375rem;
         margin-top: 5rem;
         margin-left: 8.625rem;
     }
 
-    .menu_content-body{
+    .menu_content-body {
         margin-top: 0.863rem;
         display: grid;
         width: 44.375rem;
@@ -239,7 +404,7 @@
         row-gap: 3.625rem;
     }
 
-    .menu_item .product_basket{
+    .menu_item .product_basket {
         position: absolute;
         width: 3.563rem;
         height: 3.313rem;
@@ -282,13 +447,11 @@
 
     /* Menu mains */
 
-    .mains_section{
-        width: 120rem;
-        height: 100.438rem;
+    .mains_section {
         margin: 0 auto;
     }
 
-    .mains_text{
+    .mains_text {
         display: flex;
         width: 46.75rem;
         flex-direction: column;
@@ -299,7 +462,7 @@
         padding-top: 5.125rem;
     }
 
-    .mains_text h2{
+    .mains_text h2 {
         color: var(--000000, rgba(0, 0, 0, 0.95));
         text-align: center;
         font-family: Rufina;
@@ -309,7 +472,7 @@
         line-height: 111.111%;
     }
 
-    .mains_text p{
+    .mains_text p {
         color: var(--4D4D4D, #000);
         text-align: center;
         font-family: Montserrat;
@@ -320,37 +483,36 @@
         letter-spacing: 0.03rem;
     }
 
-    .menu_content-inverted{
+    .menu_content-inverted {
         display: flex;
         gap: 6.375rem;
         margin-top: 8rem;
         margin-left: 11.125rem;
     }
 
-    .menu_content-body-inverted{
+    .menu_content-body-inverted {
         display: grid;
         width: 44.375rem;
         grid-template-rows: 20.375rem 20.375rem 20.375rem;
         row-gap: 3.625rem;
     }
 
-    .menu_content-img-inverted{
+    .menu_content-img-inverted {
         margin-top: 3.75rem;
     }
 
     /* Pastries Menu */
 
-    .pastries_and_drinks_section{
+    .pastries_and_drinks_section {
         width: 120rem;
         margin: 0 auto;
-        height: 107.125rem;
         background-image: url("../assets/Avocado.png");
         background-position: 54% 4.8%;
         background-repeat: no-repeat;
         background-size: 18.3%;
     }
 
-    .pastries_text{
+    .pastries_text {
         display: flex;
         width: 57.625rem;
         flex-direction: column;
@@ -361,7 +523,7 @@
         padding-top: 11.688rem;
     }
 
-    .pastries_text h2{
+    .pastries_text h2 {
         color: var(--000000, rgba(0, 0, 0, 0.95));
         text-align: center;
         font-family: Rufina;
@@ -372,7 +534,7 @@
         width: 66.75rem;
     }
 
-    .pastries_text p{
+    .pastries_text p {
         color: var(--4D4D4D, #000);
         text-align: center;
         font-family: Montserrat;
@@ -383,14 +545,14 @@
         letter-spacing: 0.03rem;
     }
 
-    .menu_content-pastries{
+    .menu_content-pastries {
         display: flex;
         gap: 6.375rem;
         margin-top: 9.938rem;
         margin-left: 8.625rem;
     }
 
-    .menu_content-body-pastries{
+    .menu_content-body-pastries {
         margin-top: 1.4rem;
         display: grid;
         width: 44.375rem;
@@ -694,3 +856,4 @@
         width: 1.75rem;
         height: 1.75rem;
     }
+    

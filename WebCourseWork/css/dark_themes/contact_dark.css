@@ -87,3 +87,7 @@ body.night-theme .moon{
 body.night-theme .sun{
     opacity: 1;
 }
+
+body.night-theme footer button{
+    background-color: black !important;
+}

@@ -1,4 +1,8 @@
 export const menuPageText = {
+    "menu_page_title": {
+        ru: "Меню",
+        en: "Menu",
+    },
     "header_text": {
         ru: "Забронировать",
         en: "Reservation",
@@ -60,7 +64,7 @@ export const menuPageText = {
         en: "Delicious Deep Sea Snow White Cod Fillet",
     },
     "mains_text5": {
-        ru: "Стейк с розмарино- вым маслом",
+        ru: "Стейк с розмарино&shyвым маслом",
         en: "Steak With Rosemary Butter",
     },
     "mains_text6": {
@@ -192,5 +196,201 @@ export const menuPageText = {
         ru: "Связь",
         en: "Contact",
     },
-    
+    "search_placeholder": {
+        ru: "Поиск...",
+        en: "Search...",
+    },
+    "search_button": {
+        ru: "Найти",
+        en: "Search",
+    },
+    "sort_default": {
+        ru: "По умолчанию",
+        en: "Default sorting"
+    },
+    "sort_price_asc": {
+        ru: "Цена (по возр.)",
+        en: "Price (Low to High)",
+    },
+    "sort_price_desc": {
+        ru: "Цена (по убыв.)",
+        en: "Price (High to Low)",
+    },
+    "sort_name_asc": {
+        ru: "Название (А-Я)",
+        en: "Name (A-Z)",
+    },
+    "sort_name_desc": {
+        ru: "Название (Я-А)",
+        en: "Name (Z-A)",
+    },
+    "category_all": {
+        ru: "Всё",
+        en: "All",
+    },
+    "category_starters": {
+        ru: "Закуски",
+        en: "Starters"
+    },
+    "category_mains": {
+        ru: "Основа",
+        en: "Mains",
+    },
+    "category_pastries": {
+        ru: "Выпечка и напитки",
+        en: "Pastries & Drinks",
+    },
+    "price_range": {
+        ru: "Диапозон цен",
+        en: "Price Range",
+    },
+    "min_price": {
+        ru: "Мин.",
+        en: "Min",
+    },
+    "max_price": {
+        ru: "Макс.",
+        en: "Max",
+    },
+    "apply_button": {
+        ru: "Применить",
+        en: "Apply",
+    },
+    "no_results": {
+        ru: "Товары не найдены",
+        en: "No products found matching your criteria.",
+    },
+    "cart_title": {
+        ru: 'Ваша корзина',
+        en: 'Your Cart',
+    },
+    "cart_total": {
+        ru: 'Итого:',
+        en: 'Total:',
+    },
+    "cart_checkout": {
+        ru: 'Оформить заказ',
+        en: 'Checkout',
+    },
+    "cart_empty": {
+        ru: 'Ваша корзина пуста',
+        en: 'Your cart is empty',
+    },
+    "profile_text1": {
+        ru: 'Ваш Профиль',
+        en: 'Your Profile',
+    },
+    "profile_text2": {
+        ru: 'Имя',
+        en: 'First Name',
+    },
+    "profile_text3": {
+        ru: 'Фамилия',
+        en: 'Last Name',
+    },
+    "profile_text4": {
+        ru: 'Почта',
+        en: 'Email',
+    },
+    "profile_text5": {
+        ru: 'Телефон',
+        en: 'Phone',
+    },
+    "profile_text6": {
+        ru: 'Сохранить',
+        en: 'Save',
+    },
+    "profile_text7": {
+        ru: 'Сбросить',
+        en: 'Reset',
+    },
+    "profile_text8": {
+        ru: 'Выйти',
+        en: 'Logout',
+    },
+    "profile_text9": {
+        ru: 'Логин',
+        en: 'Username',
+    },
+    "profile_text10": {
+        ru: 'Пароль',
+        en: 'Password',
+    },
+
+    "validation_phone": {
+        en: "Please enter a valid Belarusian phone number (+375...)",
+        ru: "Введите корректный номер телефона РБ (+375...)"
+    },
+    "validation_email": {
+        en: "Please enter a valid email",
+        ru: "Введите корректный email"
+    },
+    "profile_update_success": {
+        en: "Profile updated successfully!",
+        ru: "Профиль успешно обновлен!"
+    },
+    "profile_update_error": {
+        en: "Failed to update profile. Please try again.",
+        ru: "Ошибка обновления профиля. Пожалуйста, попробуйте снова."
+    },
+    "profile_reset": {
+        en: "Changes have been reset",
+        ru: "Изменения сброшены"
+    },
+    "username_taken": {
+        en: "This username is already taken",
+        ru: "Этот никнейм уже занят"
+    },
+    "email_taken": {
+        en: "This email is already registered",
+        ru: "Этот email уже зарегистрирован"
+    },
+    "phone_taken": {
+        en: "This phone number is already registered",
+        ru: "Этот номер телефона уже зарегистрирован"
+    },
+    "username_required": {
+        en: "Username is required",
+        ru: "Никнейм обязателен"
+    },
+    "profile_save": {
+        en: "Save",
+        ru: "Сохранить",
+    },
+    "profile_saving": {
+        en: "Saving...",
+        ru: "Сохранение..."
+    },
+    "validation_username_invalid": {
+        en: "Username can only contain letters, numbers and _-. symbols",
+        ru: "Логин может содержать только буквы, цифры и символы _-."
+    },
+        "validation_email_russian_chars": {
+        en: "Email cannot contain Russian letters before @",
+        ru: "Email не может содержать русские буквы перед @"
+    },
+    "validation_required": {
+        en: "This field is required",
+        ru: "Это поле обязательно для заполнения",
+    },
+    "validation_username_length": {
+        en: "Username length must be 3-20 characters",
+        ru: "Длина логина должна составлять 3-20 символов"
+    },
+    "validation_errors": {
+        en: "Please fix validation errors",
+        ru: "Исправьте ошибки валидации"
+    },
+    "validation_email_missing_at": {
+        en: "Email must contain @ symbol",
+        ru: "Email должен содержать символ @"
+    },
+    "validation_email_invalid_domain": {
+        en: "Invalid domain part after @",
+        ru: "Некорректная часть домена после @"
+    },
+    "validation_email_missing_dot": {
+        en: "Domain must contain a dot",
+        ru: "Домен должен содержать точку"
+    }
 }

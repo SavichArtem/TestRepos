@@ -1,0 +1,35 @@
+body.night-theme .cart-modal-content {
+    background-color: #2a2a2a;
+    border-color: #444;
+    color: white;
+}
+
+body.night-theme .cart-item {
+    border-bottom-color: #444;
+}
+
+body.night-theme .cart-item-info p {
+    color: #aaa;
+}
+
+body.night-theme .cart-item-quantity {
+    background-color: #333;
+    color: #fff;
+    border-color: #444;
+}
+
+body.night-theme .checkout-btn {
+    background-color: #3a8a45;
+}
+
+body.night-theme .checkout-btn:hover {
+    background-color: #4aa561;;
+}
+
+body.night-theme .checkout-notification {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.night-theme .cart-item-remove img{
+    filter: brightness(100%);
+}

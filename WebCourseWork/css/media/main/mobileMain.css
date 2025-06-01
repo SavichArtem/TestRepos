@@ -1,0 +1,34 @@
+@media (max-width: 320px) {
+  .accessibility-panel {
+    padding: 0.5rem;
+    max-height: 200vh;
+    max-width: 277vw;
+  }
+  
+  .accessibility-header h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  .accessibility-close {
+    font-size: 2rem;
+    padding: 0 0.5rem;
+  }
+  
+  .control-group h3 {
+    font-size: 1rem !important;
+  }
+  
+  .control-options button {
+    font-size: 0.8rem !important;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .accessibility-toggle {
+    font-size: 1rem !important;
+    padding: 0.8rem;
+  }
+  
+  .accessibility-controls {
+    gap: 0.5rem;
+  }
+}

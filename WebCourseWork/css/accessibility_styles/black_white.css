@@ -1,0 +1,97 @@
+.color-black-white {
+  background-color: white !important;
+  color: black !important;
+}
+
+.color-black-white .accessibility-toggle{
+  color: black !important;
+    background-color: rgb(245, 245, 245) !important;
+}
+
+.color-black-white .accessibility-panel.color-black-white .control-options button.active{
+    background-color: white !important;
+}
+
+.color-black-white header,
+.color-black-white footer,
+.color-black-white .hero_section,
+.color-black-white .chef_section,
+.color-black-white .reservation_section,
+.color-black-white .features_section,
+.color-black-white .category_section,
+.color-black-white .testimonials,
+.color-black-white .recent_post_section,
+.color-black-white .menu_section {
+  background-color: white !important;
+  color: black !important;
+  border: none !important;
+}
+
+.color-black-white .hero_scroll_default img,
+.color-black-white .footer_line_img,
+.color-black-white .footer_copyright_icons{
+    filter: invert(100%);
+}
+
+.color-black-white .footer_form_box button,
+.color-black-white .imgPost button{
+    color: black !important;    
+    background-color: rgb(245, 245, 245);
+}
+
+.color-black-white input{
+    border: black solid;
+}
+
+.color-black-white input::placeholder{
+    color: black !important;
+}
+
+.color-black-white select{
+    border: black solid;
+    background-color: transparent;
+}
+
+.color-black-white .reservation_text h3{
+    margin-left: 21rem;
+}
+
+.color-black-white h1,
+.color-black-white h2,
+.color-black-white h3,
+.color-black-white h4,
+.color-black-white h5,
+.color-black-white p,
+.color-black-white a,
+.color-black-white li,
+.color-black-white button,
+.color-black-white input,
+.color-black-white select,
+.color-black-white option {
+  color: black !important;
+}
+
+.accessibility-panel.color-black-white {
+  background: white !important;
+  color: black !important;
+  border-bottom: 2px solid black;
+}
+
+.accessibility-panel.color-black-white .accessibility-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.accessibility-panel.color-black-white .accessibility-close {
+  color: black;
+}
+
+.accessibility-panel.color-black-white .control-options button {
+  background: rgba(0, 0, 0, 0.05);
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.accessibility-panel.color-black-white .control-options button.active {
+  background: #233000;
+  color: white;
+}

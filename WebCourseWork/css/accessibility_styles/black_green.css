@@ -1,0 +1,112 @@
+.color-black-green {
+  background-color: black !important;
+  color: #00ff00 !important;
+}
+
+.color-black-green .accessibility-toggle{
+  color: black !important;
+  background-color: #00ff00 !important;
+}
+
+.color-black-green .accessibility-panel.color-black-green .control-options button.active{
+ color: black !important; 
+}
+
+.color-black-green header,
+.color-black-green footer,
+.color-black-green .hero_section,
+.color-black-green .chef_section,
+.color-black-green .reservation_section,
+.color-black-green .features_section,
+.color-black-green .category_section,
+.color-black-green .testimonials,
+.color-black-green .recent_post_section,
+.color-black-green .menu_section {
+  background-color: black !important;
+  color: #00ff00 !important; 
+  border: none !important;
+}
+
+.color-black-green .imgPost button,
+.color-black-green .footer_form_box button{
+  background-color: #050505  !important;
+  color: #00ff00 !important;
+}
+
+.color-black-green .priceList img,
+.color-black-green .hero_scroll_default,
+.color-black-green .post_card_comment,
+.color-black-green .swiper-pagination,
+.color-black-green .testimonials_control,
+.color-black-green .footer_line_img,
+.color-black-green .footer_copyright_icons,
+.color-black-green .block_inf,
+.color-black-green .post_card_readMore img{
+    filter: contrast(0) sepia(100%) hue-rotate(40deg) brightness(1) saturate(50);
+}
+
+.color-black-green .chef_section{
+    background-image: url('/assets/leaf_green_theme.png');
+}
+
+.color-black-green input{
+    border: #00ff00 solid;
+}
+
+.color-black-green input::placeholder{
+    color: #00ff00 !important;
+}
+
+.color-black-green select{
+    border: #00ff00 solid;
+    background-color: transparent;
+}
+
+.color-black-green .reservation_text h3{
+    margin-left: 21rem;
+}
+
+.color-black-green h1,
+.color-black-green h2,
+.color-black-green h3,
+.color-black-green h4,
+.color-black-green h5,
+.color-black-green p,
+.color-black-green a,
+.color-black-green li,
+.color-black-green button,
+.color-black-green input,
+.color-black-green select,
+.color-black-green option {
+  color: #00ff00 !important;
+}
+
+.color-white-black {
+  background-color: black !important;
+  color: white !important;
+}
+
+.accessibility-panel.color-black-green {
+  background: black !important;
+  color: #00ff00 !important;
+  border-bottom: 2px solid #00ff00;
+}
+
+.accessibility-panel.color-black-green .accessibility-header {
+  border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+.accessibility-panel.color-black-green .accessibility-close {
+  color: #00ff00;
+}
+
+.accessibility-panel.color-black-green .control-options button {
+  background: rgba(0, 255, 0, 0.1);
+  color: #00ff00;
+  border: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+.accessibility-panel.color-black-green .control-options button.active {
+  background: #00ff00;
+  color: black;
+}

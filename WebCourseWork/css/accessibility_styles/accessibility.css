@@ -1,0 +1,180 @@
+.accessibility-panel.active {
+  transform: translateY(0);
+}
+
+.accessibility-enabled * {
+  transition: none !important;
+  animation: none !important;
+  scroll-behavior: auto !important;
+}
+
+.control-group {
+  margin-bottom: 1.5rem;
+}
+
+.control-group h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.control-options {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.control-options button {
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.control-options button.active {
+  background: #5E6600;
+  border-color: #5E6600;
+}
+
+.accessibility-toggle {
+  grid-column: span 3;
+  padding: 1rem;
+  background: #5E6600;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Rufina', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.accessibility-toggle:hover {
+  background: #4a5100;
+}
+
+/* Стили для режима отключенных изображений */
+.images-off img:not(.accessibility-keep) {
+  display: none !important;
+}
+
+/* Стили для поясняющих надписей */
+.image-alt-label {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 120%);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 100;
+  max-width: 80%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.images-off * {
+  background-image: none !important;
+}
+
+
+.images-off .image-alt-label {
+  display: block;
+}
+
+.accessibility-panel.default-panel {
+  background: #233000 !important;
+  color: white !important;
+  border-bottom: 2px solid #5E6600;
+}
+
+.accessibility-panel.default-panel .accessibility-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.accessibility-panel.default-panel .accessibility-close {
+  color: white;
+}
+
+.accessibility-panel.default-panel .control-options button {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.accessibility-panel.default-panel .control-options button.active {
+  background: #5E6600;
+  color: white;
+}
+
+body.accessibility-enabled {
+    overflow-x: hidden;
+}
+
+body.accessibility-enabled * {
+    text-justify: auto !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0.12em !important;
+    word-spacing: 0.16em !important;
+}
+
+body.accessibility-enabled p {
+    margin-bottom: 2.25em !important;
+}
+
+body.accessibility-enabled .text-container {
+    max-width: 80ch;
+    margin: 0 auto;
+}
+
+body.accessibility-enabled.font-large {
+    font-size: 2rem; /* 200% */
+}
+
+
+.images-off .image-alt-label {
+    display: block;
+}
+
+.accessibility-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #233000;
+  color: white;
+  z-index: 10000;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-100%);
+  transition: transform 0.4s ease;
+}
+
+.accessibility-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+}
+
+.accessibility-close {
+  position: absolute;
+  top: -0.8rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  line-height: 1;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

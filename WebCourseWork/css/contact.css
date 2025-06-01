@@ -18,6 +18,7 @@ body{
     margin: 0 auto;
     height: 67.5rem;
     background-image: url("../assets/contact_background.png");
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
 }
